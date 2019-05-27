@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.futuretongfu.ui.activity.CitySelectActivity">
+
+    <!-- <LinearLayout
+         android:id="@+id/title_bar"
+         android:layout_width="match_parent"
+         android:layout_height="44dp"
+         android:background="@color/colorPrimary"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:visibility="gone">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="28dp"
+             android:layout_marginLeft="15dp"
+             android:layout_weight="1"
+             android:background="@drawable/search_wlsq_bg"
+             android:gravity="center_vertical"
+             android:orientation="horizontal"
+             android:paddingLeft="10dp"
+             android:paddingRight="10dp">
+
+             <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:src="@mipmap/icon_search" />
+
+             <android.support.design.widget.TextInputEditText
+                 android:id="@+id/edt_activity_city_select_search"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginLeft="5dp"
+                 android:background="@null"
+                 android:gravity="center_vertical"
+                 android:hint="城市名,拼音"
+                 android:imeOptions="actionSearch"
+                 android:inputType="text"
+                 android:maxLines="1"
+                 android:text=""
+                 android:textColor="@color/colorDefaultBlack"
+                 android:textColorHint="@color/cr_4"
+                 android:textSize="14sp" />
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/ll_activity_city_select_menu"
+             android:layout_width="60dp"
+             android:layout_height="match_parent"
+             android:background="@color/colorPrimary"
+             android:gravity="center">
+
+             <ImageView
+                 android:layout_width="44dp"
+                 android:layout_height="match_parent"
+                 android:background="?attr/selectableItemBackground"
+                 android:padding="7dp"
+                 android:src="@mipmap/icon_classify" />
+
+         </LinearLayout>
+     </LinearLayout>-->
+
+    <include layout="@layout/layout_common_title_bar"/>
+
+    <TextView
+        android:id="@+id/activity_city_select_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="全部城市"
+        android:textColor="#4a4a4a"
+        android:textSize="@dimen/content_text_size"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_city_select_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/contact_dialog"
+            android:layout_width="80.0dip"
+            android:layout_height="80.0dip"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimaryAlpha"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="30.0dip"
+            android:visibility="invisible"/>
+
+        <com.futuretongfu.ui.component.contacts.widget.SideBar
+            android:id="@+id/contact_sidebar"
+            android:layout_width="15dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center"/>
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_item_home_transaction_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:layout_gravity="right|center_vertical"
+            android:src="@mipmap/icon_expand" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_item_home_transaction_type"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@mipmap/icon_pay" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_item_home_transaction_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付"
+                    android:textColor="@color/front_s7"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_home_transaction_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="06-02 18:54:00"
+                    android:textColor="@color/front_s7"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_home_transaction_paynum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="￥ 0.00"
+                    android:textColor="@color/front_s8"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_home_transaction_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text=""
+                    android:textColor="@color/front_s7"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_item_home_transaction_getnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="到账金额：￥10.00"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_item_home_transaction_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="手续费：￥2.00"
+                    android:textColor="@color/front_s7"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_item_home_transaction_details"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:gravity="center"
+        android:text="查看详情"
+        android:textColor="@color/front_s6"
+        android:textSize="14sp" />
+
+</LinearLayout>

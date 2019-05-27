@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/main_white">
+
+
+    <ImageView
+        android:id="@+id/bt_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="10dp"
+        android:src="@mipmap/arrow_back_gray" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxEms="8"
+        android:singleLine="true"
+        android:textColor="@color/common_titlebar_title"
+        android:textSize="@dimen/title_text_size" />
+
+    <ImageView
+        android:id="@+id/bt_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/icon_collect_red"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/bt_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_margin="10dp"
+        android:src="@mipmap/icon_share_red"
+        android:visibility="gone" />
+
+
+    <ImageView
+
+        android:id="@+id/bt_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_margin="10dp"
+        android:src="@mipmap/icon_add_red"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/bt_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/main_red"
+        android:textSize="15sp"
+        android:visibility="gone" />
+    </FrameLayout>
+    <View
+        style="@style/Divider"/>
+</LinearLayout>

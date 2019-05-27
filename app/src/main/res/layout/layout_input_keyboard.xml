@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View style="@style/Divider_horizontal_ccc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+
+    </LinearLayout>
+
+
+    <View style="@style/Divider_horizontal_ccc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+    </LinearLayout>
+
+
+    <View style="@style/Divider_horizontal_ccc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+    </LinearLayout>
+
+
+    <View style="@style/Divider_horizontal_ccc"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_e6ebf3"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/color_e6ebf3"
+            android:textSize="24sp"/>
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <TextView
+            android:id="@+id/text_input_number0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/color_333333"
+            android:textSize="24sp"/>
+
+
+        <View style="@style/Divider_vertical_ccc"/>
+
+        <RelativeLayout
+            android:id="@+id/delete_key_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_e6ebf3"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/delete_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/keyboard_backspace"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/color_e6ebf3"/>-->
+
+    <!--<View style="@style/Divider_vertical_ccc"/>-->
+
+    <!--<TextVie-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@color/white"/>-->
+
+    <!--<View style="@style/Divider_vertical_ccc"/>-->
+
+
+    <!--</LinearLayout>-->
+
+    <View style="@style/Divider_horizontal_ccc"/>
+
+
+</LinearLayout>

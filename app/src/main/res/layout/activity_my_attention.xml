@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.MyCollectionActivity">
+
+    <include
+        layout="@layout/common_title_bar_change_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View style="@style/Divider" />
+
+    <FrameLayout
+        android:id="@+id/fl_my_attention"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

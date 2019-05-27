@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/shape_bank_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fynn_prompt_top_radius"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp">
+
+            <ImageView
+                android:id="@+id/image_store_receivables_code_store_head"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_pic2" />
+
+            <TextView
+                android:id="@+id/tv_store_receivables_code_store_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:text="--"
+                android:textColor="@color/colorDefaultBlack"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/image_store_receivables_code_main"
+                    android:layout_width="230dp"
+                    android:layout_height="230dp"
+                    android:src="@mipmap/icon_pic2" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/image_store_receivables_code_pic"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="3dp"
+                    android:background="@drawable/shape_erweima_gray"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="41dp">
+
+                <TextView
+                    android:id="@+id/tv_store_receivables_code_set_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="设置金额"
+                    android:textColor="@color/front_s8"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <View
+                    style="@style/Divider_vertical"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="2dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_store_receivables_code_collect_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="5dp"
+                    android:text="收款记录"
+                    android:textColor="@color/front_s8"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="支持:"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDefaultBlack"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="首都富"
+            android:paddingBottom="20dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp"
+            android:drawableLeft="@mipmap/icon_shoudufupay"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDefaultBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="支付宝"
+            android:paddingBottom="20dp"
+            android:paddingRight="15dp"
+            android:drawableLeft="@mipmap/icon_alipy"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDefaultBlack"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="微信"
+            android:drawableLeft="@mipmap/icon_wechatpay"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorDefaultBlack"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+</LinearLayout>

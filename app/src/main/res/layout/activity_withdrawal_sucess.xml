@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.WithdrawalSucessActivity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_succeed"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:text="申请提现成功"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="9dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:text="我们将会在1～3个工作日内完成审核"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="38dp"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:text="完成"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:background="@drawable/selector_btn_corner_blue"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+</LinearLayout>

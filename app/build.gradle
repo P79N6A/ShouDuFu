@@ -1,0 +1,206 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+def versionMajor = 2
+def versionMinor = 2
+def versionPatch = 0
+def versionBuild = 0
+
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "27.0.0"
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    defaultConfig {
+        applicationId "com.futuretongfu"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 220
+        //versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true    //启用multidex的支持
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "407e32d3da45f562244e36c1", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+        // 配置.so文件
+        ndk {
+            // 选择要添加的对应的cpu类型的.so库
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'mips','mips64','x86_64'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('../futuretongfu.jks')//签名文件路径
+            storePassword "futuretongfu"
+            keyAlias "futuretongfu"
+            keyPassword "futuretongfu"  //签名密码
+            println("====== signingConfigs.debug ======")
+        }
+        wlf {
+            keyAlias 'futuretongfu'
+            keyPassword 'futuretongfu'
+            storeFile file('../futuretongfu.jks')
+            storePassword 'futuretongfu'
+        }
+    }
+
+    buildTypes {
+
+        debug {
+            //移除无用的资源文件
+            shrinkResources true
+            zipAlignEnabled true
+            minifyEnabled true
+            manifestPlaceholders =
+                    [APP_NAME  : "@string/app_name",
+                     APP_ICON  : "@mipmap/app_icon",
+                     AMap_APPID: "bf856235dff0365606f8a7249bd74b0a"//未来通富地图APPID 发行版
+                    ] // 配置主包的应用名称
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            shrinkResources true   //移除无用的资源文件
+            zipAlignEnabled true  //压缩对齐生成的apk包
+
+            minifyEnabled true     //   //启用混淆代码的功能
+            manifestPlaceholders =
+                    [APP_NAME  : "@string/app_name",
+                     APP_ICON  : "@mipmap/app_icon",
+                     AMap_APPID: "bf856235dff0365606f8a7249bd74b0a"//未来通富地图APPID 发行版
+                    ] // 配置主包的应用名称
+            //指定混淆规则，需要压缩优化的混淆要把proguard-android.txt换成proguard-android.txt
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //输出APK路径
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为未来付_v1.0_2015-01-15_渠道.apk
+                        def fileName = "futurerich_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+
+        }
+        // 第一个马甲包
+        majiabaoOne.initWith(buildTypes.debug) // 以release的配置来初始化马甲包配置
+        majiabaoOne {
+            applicationIdSuffix ".majiabaoOne"
+            // 修改马甲包的applicationId，马甲包的application将为com.liunian.majiabaotest.majiabaoOne，即在原来的applicationId后加上配置内容
+            manifestPlaceholders =
+                    [APP_NAME  : "@string/app_name_majia",
+                     APP_ICON  : "@mipmap/logo",
+                     AMap_APPID: "bf856235dff0365606f8a7249bd74b0a"//未来通富地图APPID 发行版
+                    ] // 配置马甲包的应用名称
+        }
+//配置JNILibs
+        sourceSets {
+            main {
+                jniLibs.srcDirs = ['libs']
+            }
+        }
+
+    }
+    //多渠道打包
+    productFlavors {
+        Prod {}
+        BaiDu {}
+        Tencent {}
+        Qh360 {}
+        XiaoMi {}
+        HuaWei {}
+        oppo{}
+        SVMSUNG{}
+        meizu{}
+    }
+    //多渠道打包
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [APK_CHANNEL_VALUE: name]
+    }
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    def supportVersion = '25.3.1'
+    compile "com.android.support:appcompat-v7:$supportVersion"
+    compile "com.android.support:support-v13:$supportVersion"
+    compile "com.android.support:recyclerview-v7:$supportVersion"
+    compile "com.android.support:cardview-v7:$supportVersion"
+    compile "com.android.support:design:$supportVersion"
+    compile project(':zxinglib')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'commons-codec:commons-codec:1.10'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.8'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.1@aar'
+    compile 'com.trello:rxlifecycle-android:1.0'
+    compile 'com.trello:rxlifecycle-components:1.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'org.litepal.android:core:1.3.2'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'me.iwf.photopicker:PhotoPicker:0.9.5@aar'
+    compile 'com.github.zcweng:switch-button:0.0.2@aar'
+    compile 'xiaofei.library:hermes-eventbus:0.3.0'
+    compile 'cc.cloudist.acplibrary:library:1.2.1'
+    compile 'com.alibaba:fastjson:1.2.33'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.github.lzyzsd:jsbridge:1.0.4'
+    compile 'com.brucetoo.pickview:library:1.2.3'
+    compile 'cn.bingoogolapple:bga-banner:2.1.7@aar'
+    testCompile 'junit:junit:4.12'
+    //高德搜索
+    compile 'com.amap.api:search:latest.integration'
+    compile 'io.github.lizhangqu:coreprogress:1.0.2'
+    compile 'org.jsoup:jsoup:1.8.3'
+    compile 'com.xiaosu:VerticalRollingTextView:2.0.8'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile files('libs/appkefu_kefu_sdk4.jar')
+    compile files('libs/AMap3DMap_6.5.0_AMapSearch_6.5.0_AMapLocation_4.3.0_20181016.jar')
+
+    compile 'cn.jiguang.sdk:jpush:3.1.6'  // 此处以JPush 3.1.6 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.2.5'  // 此处以JCore 1.2.5 版本为例。
+
+    compile files('libs/Msc.jar')
+    compile 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
+    compile 'com.qianwen:update-app:3.5.2'
+
+
+}
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots/'
+    }
+
+}
+
+apply plugin: 'kotlin-android-extensions'

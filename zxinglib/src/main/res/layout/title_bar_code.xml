@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/bt_back"
+        style="@style/CommonWwHm"
+        android:src="@mipmap/arrow_back" />
+<!--  android:text="二维码"-->
+    <TextView
+        android:id="@+id/tv_title"
+        android:text="扫一扫"
+        style="@style/CommonWwHwLGc.TvStCcw" />
+
+</FrameLayout>

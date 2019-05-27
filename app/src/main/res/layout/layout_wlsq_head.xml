@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<android.support.v4.widget.NestedScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:fillViewport="true"-->
+    <!--android:scrollbars="none"-->
+    <!--android:visibility="gone">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <cn.bingoogolapple.bgabanner.BGABanner
+        android:id="@+id/banner_wlsq_default"
+        style="@style/BannerDefaultStyle"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:banner_pointDrawable="@drawable/selector_dots_selector"
+        app:banner_transitionEffect="defaultEffect" />
+
+   <!-- <ImageView
+        android:id="@+id/image_wlsq_banner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/business_banner" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_wlsq_type"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:interpolator="@android:anim/accelerate_interpolator" />
+
+    <LinearLayout
+        android:id="@+id/wlsq_ll_type_dots"
+        android:layout_width="match_parent"
+        android:layout_height="21dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+
+
+    <!--</LinearLayout>-->
+
+    <!--</android.support.v4.widget.NestedScrollView>-->
+
+</LinearLayout>

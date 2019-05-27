@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.UpgradeMember2Activity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@+id/no_data_layout"
+        layout="@layout/layout_search_no_data"
+        android:visibility="gone"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_tk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/selector_upgrade_member_tk"
+                    android:gravity="center"
+
+                    android:layout_weight="1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/subcontent_text_size2"/>
+                <!--android:text="@string/user_type_tk_vip"-->
+
+               <!-- <TextView
+                    android:id="@+id/text_ck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/selector_upgrade_member_ck"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/user_type_ck_vip"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/subcontent_text_size2" />
+                <TextView
+                    android:id="@+id/text_cy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/selector_upgrade_member_cy"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/user_type_cy_vip"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/subcontent_text_size2" />
+                <TextView
+                    android:id="@+id/text_ct"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/selector_upgrade_member_ct"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/user_type_ct_vip"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/subcontent_text_size2" />-->
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_tip_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/shape_upgrade_member_tip_bg_blue"
+                android:drawableLeft="@mipmap/icon_return1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_type_tip_11"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/subcontent_text_size2" />
+
+           <!-- <TextView
+                android:id="@+id/text_tip_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_upgrade_member_tip_bg_blue"
+                android:drawableLeft="@mipmap/icon_recommend1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_type_tip_2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/subcontent_text_size2" />
+
+            <TextView
+                android:id="@+id/text_tip_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_upgrade_member_tip_bg_gray"
+                android:drawableLeft="@mipmap/icon_apply1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_type_tip_3"
+                android:textColor="@color/color_user_type_up_mem_un_select"
+                android:textSize="@dimen/subcontent_text_size2" />
+
+            <TextView
+                android:id="@+id/text_tip_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_upgrade_member_tip_bg_gray"
+                android:drawableLeft="@mipmap/icon_partner1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_type_tip_4"
+                android:textColor="@color/color_user_type_up_mem_un_select"
+                android:textSize="@dimen/subcontent_text_size2" />
+
+            <TextView
+                android:id="@+id/text_tip_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_upgrade_member_tip_bg_gray"
+                android:drawableLeft="@mipmap/icon_advertisement1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_type_tip_5"
+                android:textColor="@color/color_user_type_up_mem_un_select"
+                android:textSize="@dimen/subcontent_text_size2" />
+
+            <TextView
+                android:id="@+id/text_tip_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/shape_upgrade_member_tip_bg_gray"
+                android:drawableLeft="@mipmap/icon_award1"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_type_tip_6"
+                android:textColor="@color/color_user_type_up_mem_un_select"
+                android:textSize="@dimen/subcontent_text_size2" />-->
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="39dp"
+                android:layout_marginLeft="@dimen/activity_bottom_bar_height"
+                android:layout_marginRight="@dimen/activity_bottom_bar_height"
+                android:background="@drawable/selector_btn_corner_blue"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:enabled="false"/>
+            <LinearLayout
+                android:id="@+id/checkbox_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="已同意"
+                    android:textColor="@color/colorMiddleGray"
+                    android:textSize="12sp"
+                    android:theme="@style/UpgradeMemberCheckBox" />
+
+                <TextView
+                    android:id="@+id/text_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="《首都富用户协议》"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

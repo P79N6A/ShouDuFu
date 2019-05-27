@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.MainActivity">
+
+    <include
+        android:id="@+id/layout_bottom_bar"
+        layout="@layout/layout_main_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/Divider"
+        android:layout_above="@id/layout_bottom_bar"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_line"/>
+
+</RelativeLayout>

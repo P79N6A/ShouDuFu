@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_dialog_home_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="147dp"
+        android:layout_height="185dp"
+        android:layout_gravity="right"
+        android:background="@drawable/icon_popup_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_menu_message"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@drawable/item_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/icon_share_4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:textColor="@color/front_s9"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_menu_add_home"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@drawable/item_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/icon_add_friend_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"
+                android:textColor="@color/front_s9"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_menu_qr_search"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@drawable/item_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/icon_scan_code_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:textColor="@color/front_s9"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+        <View style="@style/Divider" />
+
+        <LinearLayout
+            android:id="@+id/ll_dialog_menu_qr_concern"
+            android:layout_width="match_parent"
+            android:layout_height="39dp"
+            android:background="@drawable/item_selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/icon_scan_code_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的关注"
+                android:textColor="@color/front_s9"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

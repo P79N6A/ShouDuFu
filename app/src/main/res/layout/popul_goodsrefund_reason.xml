@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:id="@+id/ll_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:focusable="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退款原因"
+            android:textColor="@color/text_color_black"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:padding="@dimen/dp_15"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/cb1"
+                style="@style/checkbox_jubao"
+                android:text="拍错/多拍/不想要" />
+
+            <RadioButton
+                android:id="@+id/cb2"
+                style="@style/checkbox_jubao"
+                android:layout_marginTop="1dp"
+                android:text="协商一致退款" />
+
+            <RadioButton
+                android:id="@+id/cb3"
+                style="@style/checkbox_jubao"
+                android:layout_marginTop="1dp"
+                android:text="缺货" />
+
+            <RadioButton
+                android:id="@+id/cb4"
+                style="@style/checkbox_jubao"
+                android:layout_marginTop="1dp"
+                android:text="未按约定时间发货" />
+
+            <RadioButton
+                android:id="@+id/cb5"
+                style="@style/checkbox_jubao"
+                android:layout_marginTop="1dp"
+                android:text="其他" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_popul_dissmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_red"
+            android:gravity="center"
+            android:text="关闭"
+            android:layout_marginTop="@dimen/dp_20"
+            android:padding="@dimen/dp_15"
+            android:textColor="@color/text_color_white"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <!-- 可点击的外部View -->
+    <View
+        android:id="@+id/outView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_popup" />
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:text="为了您的账户安全，请绘制手势密码"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="28dp"
+        android:textSize="@dimen/text_size_user_title"
+        android:textColor="@color/colorTextNormalLight"/>
+
+    <com.futuretongfu.ui.component.gestureLock.GestureLockViewGroup
+        android:id="@+id/id_gestureLockViewGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:count="3"
+        app:tryTimes="5"
+        app:color_no_finger_inner_circle="#D5DBE8"
+        app:color_no_finger_outer_circle="@android:color/transparent"
+        app:color_finger_on="@color/colorPrimary"
+        app:color_finger_up="@color/colorPrimary"
+        app:color_finger_up_err="@color/color_finger_up_error"
+        app:innerCircleRadius="10dp"
+        app:lock_margin="30dp"
+        app:lock_width="60dp"
+        app:line_width="2dp">
+    </com.futuretongfu.ui.component.gestureLock.GestureLockViewGroup>
+
+</LinearLayout>

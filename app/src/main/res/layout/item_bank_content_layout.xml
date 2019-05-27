@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_swipe_menu"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_size_bank_card">
+
+
+    <RelativeLayout
+        android:id="@+id/layout_bank_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_bank_bg"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:id="@+id/image_bank_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <RelativeLayout
+            android:id="@+id/logo_layout"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/white_circle_bg">
+
+            <ImageView
+                android:id="@+id/iamge_bank_icon"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_alignBottom="@+id/logo_layout"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/logo_layout"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/bank_card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/bank_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/bank_card_function_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textColor="@color/text_color_white"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/bank_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/logo_layout"
+                android:layout_gravity="bottom"
+                android:text=""
+                android:layout_toRightOf="@+id/logo_layout"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.order.OrderDetailsActivity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgv_photo"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:src="@mipmap/icon_head_2"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imgv_photo">
+
+                    <TextView
+                        android:id="@+id/text_name"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorMiddleGray"/>
+
+                    <TextView
+                        android:id="@+id/text_time"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="@color/colorTextNormalLight"/>
+
+                </LinearLayout>
+
+                <View style="@style/Divider"
+                    android:layout_below="@id/imgv_photo">
+                </View>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/colorWhite">
+
+                <TextView
+                    android:text="订单信息"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/text_size_user_title"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:drawableLeft="@mipmap/icon_indent_2"
+                    android:drawablePadding="12dp"/>
+
+                <View style="@style/Divider" />
+
+                <TextView
+                    android:text="消费凭证"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin"
+                    android:textSize="@dimen/content_text_size"
+                    android:textColor="@color/colorMiddleGray"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_horizontal_margin">
+
+                    <ImageView
+                        android:id="@+id/imgv_xfpz"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:src="@drawable/fynn_prompt_dialog_btn_center_pressed"/>
+
+                    <TextView
+                        android:id="@+id/text_examine_doing"
+                        android:text="审核中"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:background="#77000000"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textColor="@color/colorWhite"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/text_examine_faile"
+                        android:text="审核失败"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/imgv_xfpz"
+                        android:textSize="13sp"
+                        android:textColor="#E01710"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:text="订单编号"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorMiddleGray"/>
+
+                    <TextView
+                        android:id="@+id/text_order_no"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorTextNormalLight"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:text="总消费"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorMiddleGray"/>
+
+                    <TextView
+                        android:id="@+id/text_all_money"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorTextNormalLight"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:text="实付金额"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorMiddleGray"/>
+
+                    <TextView
+                        android:id="@+id/text_real_money"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorTextNormalLight"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_shenhe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:text="审核时间"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorMiddleGray"/>
+
+                    <TextView
+                        android:id="@+id/text_time_sh"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorTextNormalLight"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:text="获得通贝"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorMiddleGray"/>
+
+                    <TextView
+                        android:id="@+id/text_is_tongbei"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/color_finger_up_error"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_tuihuo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:text="退货"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorMiddleGray"/>
+
+                    <TextView
+                        android:id="@+id/text_tuihuo"
+                        android:text=""
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:textSize="@dimen/subcontent_text_size2"
+                        android:textColor="@color/colorTextNormalLight"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:text="确认退款"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="72dp"
+                android:background="@drawable/selector_btn_blue"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                style="?android:attr/borderlessButtonStyle"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

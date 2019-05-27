@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_tel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:minHeight="60dp"
+        android:padding="15dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <View style="@style/Divider" />
+
+    <TextView
+        android:id="@+id/text_call"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:minHeight="60dp"
+        android:padding="15dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <View style="@style/Divider" />
+
+    <TextView
+        android:id="@+id/text_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:gravity="center"
+        android:minHeight="60dp"
+        android:padding="15dp"
+        android:text="取消"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <View style="@style/Divider" />
+
+</LinearLayout>

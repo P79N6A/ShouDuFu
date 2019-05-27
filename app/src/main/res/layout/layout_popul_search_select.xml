@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pupul_bg"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_10">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_search_checkBox_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_40"
+            android:text="价格区间"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/sp_16" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_40"
+            android:paddingRight="@dimen/dp_40">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_search_price_start"
+                style="@style/textview_shape_gray"
+                android:hint="最低价"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textColor="@color/text_color_gray" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:background="@color/main_red" />
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/et_search_price_end"
+                style="@style/textview_shape_gray"
+                android:hint="最高价"
+                android:inputType="number"
+                android:maxLength="5"
+                android:textColor="@color/text_color_gray" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:paddingLeft="@dimen/dp_40"
+            android:text="品牌"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/sp_16" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_search_brand_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <TextView
+                android:id="@+id/tv_search_price_reset"
+                style="@style/textview_shape_gray"
+                android:background="#d8d8d8"
+                android:padding="@dimen/dp_10"
+                android:text="重置"
+                android:textColor="@color/text_color_black" />
+
+            <TextView
+                android:id="@+id/tv_search_price_commit"
+                style="@style/textview_shape_gray"
+                android:background="@color/main_red"
+                android:padding="@dimen/dp_10"
+                android:text="确定"
+                android:textColor="@color/text_color_white" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/outview_bg" />
+</LinearLayout>

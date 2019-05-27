@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/main_white">
+
+    <ImageView
+        android:id="@+id/bt_back"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="10dp"
+        android:src="@mipmap/arrow_back_gray" />
+
+    <com.futuretongfu.view.SegmentView
+        android:id="@+id/segmentview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_1" />
+    <ImageView
+        android:id="@+id/img_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="45dp"
+        android:visibility="gone"
+        android:src="@mipmap/icon_search_red" />
+
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|right"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:text="编辑"
+        android:visibility="gone"
+        android:textColor="@color/text_color_red"
+        android:textSize="15sp" />
+</FrameLayout>

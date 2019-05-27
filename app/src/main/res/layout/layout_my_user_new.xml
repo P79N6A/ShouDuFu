@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_user_type_up_mem_select_red"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_fperson_details"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/civ_fperson_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/icon_head_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_toRightOf="@+id/civ_fperson_head"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fperson_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color_white" />
+
+                <TextView
+                    android:id="@+id/text_unknown_real_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/shape_user_unknown_real_name"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="未实名"
+                    android:textColor="@color/colorTextNormalLight"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_fperson_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color_white" />
+
+            <TextView
+                android:id="@+id/tv_fperson_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="会员等级：享客"
+                android:textColor="@color/text_color_white" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_fperson_ercode"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/img_fperson_details"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@mipmap/icon_mypage_code_qrcode" />
+        <ImageView
+            android:id="@+id/img_fperson_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/icon_expansion_2" />
+    </RelativeLayout>
+
+</RelativeLayout>

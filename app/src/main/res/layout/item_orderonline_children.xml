@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg_gray2"
+    android:paddingLeft="@dimen/dp_12"
+    android:clickable="false"
+    android:paddingRight="@dimen/dp_12">
+
+    <ImageView
+        android:id="@+id/img_good_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp" />
+
+    <TextView
+        android:id="@+id/tv_good_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_toLeftOf="@+id/tv_good_price"
+        android:layout_toRightOf="@id/img_good_image"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/color_333333"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_good_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_good_name"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/img_good_image"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_good_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:textColor="@color/text_color_red"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_good_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tv_good_price"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_color_red"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_good_refund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rect_refund"
+        android:text="退款"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/img_good_image"/>
+</RelativeLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.UpgradeBusiness1Activity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_business_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:hint="商家名称"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商家LOGO"
+                android:textColor="@color/colorMiddleGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@drawable/shape_corner_hollow_gray"
+                android:clickable="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_addition_2"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgv_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:id="@+id/close_logo_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@mipmap/icon_close_3"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+
+            <View style="@style/Divider"/>
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/boss_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:hint="法人代表"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:id="@+id/text_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:clickable="true"
+                android:hint="省份、城市、区县"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"
+                />
+
+            <View style="@style/Divider"/>
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_address_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:hint="详细地址"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/text_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:hint="移动电话"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:hint="固定电话"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:phoneNumber="false"
+                android:singleLine="true"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:text="商家照片"
+                android:textColor="@color/colorMiddleGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@drawable/shape_corner_hollow_gray">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_addition_2"
+                    />
+
+                <ImageView
+                    android:id="@+id/iamge_store_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/close_store_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    android:src="@mipmap/icon_close_3"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:text="营业执照"
+                android:textColor="@color/colorMiddleGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@drawable/shape_corner_hollow_gray">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_addition_2"
+                    />
+
+                <ImageView
+                    android:id="@+id/iamge_business_licence"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/close_business_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    android:src="@mipmap/icon_close_3"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="税务登记证"
+                android:textColor="@color/colorMiddleGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <RelativeLayout
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@drawable/shape_corner_hollow_gray">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_addition_2"
+                    />
+
+                <ImageView
+                    android:id="@+id/iamge_tax_registration"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:id="@+id/close_tax_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    android:src="@mipmap/icon_close_3"/>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/selector_btn_corner_blue"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

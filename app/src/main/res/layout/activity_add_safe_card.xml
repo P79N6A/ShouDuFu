@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/root_layout"
+    tools:context="com.futuretongfu.ui.activity.AddSafeCardActivity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="持卡人"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <TextView
+                    android:id="@+id/people_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/people"
+                    android:text=""
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/activity_add_safe_card_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="卡号"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <EditText
+                    android:id="@+id/card_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:hint="请输入银行卡卡号"
+                    android:inputType="number"
+                    android:maxLength="21"
+                    android:text=""
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="15sp" />
+
+
+                <ImageView
+                    android:id="@+id/image_scan_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:padding="5dp"
+                    android:visibility="gone"
+                    android:src="@mipmap/icon_richscan_5" />
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="开户银行"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <TextView
+                    android:id="@+id/bank_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/arraw"
+                    android:layout_toRightOf="@+id/bank"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/dp_20"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:id="@+id/arraw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:src="@mipmap/icon_expansion_2" />
+            </RelativeLayout>
+            <View style="@style/Divider" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="开户地区"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <TextView
+                    android:id="@+id/choose_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/arraw_address"
+                    android:layout_toRightOf="@+id/address"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/dp_20"
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:id="@+id/arraw_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:src="@mipmap/icon_expansion_2" />
+            </RelativeLayout>
+            <View style="@style/Divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:text="手机"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@color/colorWhite"
+                    android:hint="请输入银行卡预留手机号"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:text=""
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="同意"
+                    android:textColor="@color/colorMiddleGray"
+                    android:textSize="12sp"
+                    android:theme="@style/UpgradeMemberCheckBox" />
+
+                <TextView
+                    android:id="@+id/text_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:paddingBottom="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_horizontal_margin"
+                    android:text="《首都富绑卡协议》"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/selector_btn_corner_blue"
+                android:enabled="false"
+                android:text="确认新增"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

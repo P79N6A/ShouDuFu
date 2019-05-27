@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBg">
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/main_red">
+
+
+        <ImageView
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@mipmap/arrow_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/title_text_size" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:text="@string/jifen_f_cur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="13sp"
+                android:textColor="@color/colorWhite"/>
+
+            <ImageView
+                android:id="@+id/imgv_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_visible"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_amount"
+            android:text="0.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/layout_1"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="15dp"/>
+
+        <Button
+            android:id="@+id/btn_bill"
+            android:text="帐单"
+            android:layout_width="96dp"
+            android:layout_height="31dp"
+            android:layout_below="@id/text_amount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:background="@drawable/selector_btn_corner_white_light"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_red"
+            style="?android:attr/borderlessButtonStyle"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:text="@string/jifen_f_djs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/content_text_size"
+            android:textColor="@color/colorDefaultBlack"/>
+
+        <TextView
+            android:id="@+id/text_inter_avlbal"
+            android:text="0.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:textSize="@dimen/content_text_size"
+            android:textColor="#FF5500"/>
+
+    </FrameLayout>
+
+</LinearLayout>

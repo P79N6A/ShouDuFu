@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:padding="10dp"
+            android:src="@mipmap/arrow_back_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_rect_gray_ded9d9"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_search" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:completionThreshold="1"
+                android:hint="搜索店铺内商品"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textColorHint="@color/text_color_edittexthint"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tv_asearch_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_15"
+            android:src="@mipmap/icon_more_shu" />
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swp_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_asearch_storegoods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

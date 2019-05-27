@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_selector"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/image_item_tranfer_friend_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/icon_transfer_2"
+            app:riv_border_width="0dip"
+            app:riv_corner_radius="3dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_item_tranfer_friend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/front_s5"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_item_tranfer_friend_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/front_s7"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_item_tranfer_friend_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已拒绝"
+            android:textColor="@color/front_s7"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_item_tranfer_friend_invite"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_btn_blue"
+            android:gravity="center"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/text_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
+                android:gravity="center"
+                android:text="邀请"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_item_tranfer_friend_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_item_tranfer_friend_agree"
+                android:layout_width="54dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_btn_blue"
+                android:gravity="center"
+                android:text="接受"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_item_tranfer_friend_refuse"
+                android:layout_width="54dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_btn_orange1"
+                android:gravity="center"
+                android:text="拒绝"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_marginLeft="15dp" />
+
+</LinearLayout>

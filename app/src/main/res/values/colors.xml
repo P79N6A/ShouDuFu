@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#44a8a8</color>
+    <color name="colorPrimaryDark">#44a8a8</color>
+    <color name="colorAccent">#0091EE</color>
+    <color name="colorblue">#990091ee</color>
+    <color name="colorPrimaryAlpha">#7AC3F1</color>
+    <color name="colorDivider">#e7e7e7</color>
+    <color name="colorBg">#F5F5F5</color>
+    <color name="colorWhite">@android:color/white</color>
+    <color name="colorMiddleGray">#666666</color>
+    <color name="colorDefaultBlack">#333333</color>
+    <color name="colorLightGray">#aaaaaa</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="colorPrimaryBlack">#38393F</color>
+    <color name="colorAccentBlack">#303135</color>
+
+    <color name="colorTabSelect">#44a8a8</color>
+    <color name="colorTabUnselect">#666666</color>
+
+    <color name="colorTextNormalLight">#999999</color>
+
+    <color name="side_bar_text">#0285cc</color>
+    <color name="wored">#e10b15</color>
+
+    <color name="white">#ffffff</color>
+
+    <!-- QrCode -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#44a8a8</color>
+    <color name="viewfinder_mask">#60666666</color>
+
+    <!--<color name="side_bar_text">#555555</color>-->
+    <color name="front_s1">#cccccc</color>
+    <color name="front_s2">#0285dd</color>
+    <color name="front_s3">#44a8a8</color>
+    <color name="front_s4">#bbbfc8</color>
+    <color name="front_s5">#323232</color>
+    <color name="front_s6">#3159f2</color>
+    <color name="front_s7">#999999</color>
+    <color name="front_s8">#44a8a8</color>
+    <color name="front_s9">#3b3b3b</color>
+
+    <color name="cr_1">#44a8a8</color>
+    <color name="cr_2">#018de9</color>
+    <color name="cr_3">#44a8a8</color>
+    <color name="cr_4">#949496</color>
+    <color name="cr_5">#959595</color>
+    <color name="cr_6">#323232</color>
+
+    <color name="background_white_pressed">#FFEEEEEE</color>
+
+    <color name="colorOrange">#44a8a8</color>
+    <color name="colorOrange2">#138585</color>
+
+
+    <color name="color_141414">#141414</color>
+
+    <color name="color_cccccc">#cccccc</color>
+    <color name="color_6ba3ff">#6ba3ff</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_0091ee">#0091ee</color>
+    <color name="color_5f5f5f">#F5F5F5</color>
+    <color name="color_e6e6e6">#E6E6E6</color>
+    <color name="color_e6ebf3">#E6EBF3</color>
+    <color name="color_ff4040">#FF4040</color>
+
+
+    <!-- 银行卡背景颜色 -->
+
+
+    <color name="color_finger_up_error">#44a8a8</color>
+
+    <color name="color_user_type_up_mem_un_select">#cccccc</color>
+    <color name="color_user_type_up_mem_select_blue">#0091ee</color>
+    <color name="color_user_type_up_mem_select_yellow">#138585</color>
+    <color name="color_user_type_up_mem_select_red">#44a8a8</color>
+    <color name="color_user_type_up_mem_select_purple">#7359A2</color>
+
+    <color name="main_white">#ffffff</color>
+    <color name="main_gray">#f0f0f0</color>
+    <color name="main_red">#44a8a8</color>
+    <color name="text_color_red">#44a8a8</color>
+    <color name="text_color_white">#ffffff</color>
+    <color name="text_color_blue">#865de6</color>
+    <color name="text_color_orange">#138585</color>
+    <color name="text_color_black">#333333</color>
+    <color name="text_color_gray">#999999</color>
+    <color name="text_color_green">#138585</color>
+
+    <color name="text_color_edittext">#333333</color>
+    <color name="text_color_edittexthint">#999999</color>
+    <color name="textview_login">#999999</color>
+    <color name="line_gray">#ebebeb</color>
+    <color name="line_red">#44a8a8</color>
+    <color name="main_bg_gray">#f6f5f7</color>
+    <color name="main_bg_gray2">#f2f2f2</color>
+    <color name="common_titlebar_title">#000000</color>
+    <color name="outview_bg">#22000000</color>
+    <color name="pupul_bg">#f6f6f6</color>
+
+    <color name="segment_pre">#44a8a8</color>
+    <color name="segment_no">#ffffff</color>
+    <color name="page_backgroup">#f0f0f0</color>
+</resources>

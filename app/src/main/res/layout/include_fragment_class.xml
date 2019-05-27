@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.futuretongfu.view.NotifyingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_white"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.youth.banner.Banner
+            android:id="@+id/banner_class_details"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@mipmap/icon_pic_3"
+            android:focusable="true"
+            app:image_scale_type="fit_xy"
+            app:indicator_drawable_selected="@drawable/banner_check"
+            app:indicator_drawable_unselected="@drawable/banner_nocheck"
+            app:indicator_height="10px"
+            app:indicator_margin="10px"
+            app:indicator_width="10px"
+            app:is_auto_play="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_banner_class_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+        </RelativeLayout>
+    </LinearLayout>
+</com.futuretongfu.view.NotifyingScrollView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/SwipeMenuExpandableListView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_15">
+
+        <CheckBox
+            android:id="@+id/cb_item_shopgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:button="@drawable/checkbox_selector"
+            android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_item_shopgroup_storename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="10dp"
+            android:layout_toRightOf="@+id/cb_item_shopgroup"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:drawableRight="@mipmap/icon_expansion_2"
+            android:text="西可可免税代购"
+            android:textColor="@color/text_color_black"
+            android:textSize="13sp"/>
+        <TextView
+            android:id="@+id/tv_item_shopgroup_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:text="编辑"/>
+    </RelativeLayout>
+</LinearLayout>

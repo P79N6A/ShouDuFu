@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.user.SettingActivity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/btn_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true"
+                android:paddingBottom="17dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_real_name"
+                    android:drawablePadding="9dp"
+                    android:text="收货地址管理"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+
+            <FrameLayout
+                android:id="@+id/btn_smrz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true"
+                android:paddingBottom="17dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_real_name"
+                    android:drawablePadding="9dp"
+                    android:text="实名认证"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+
+            <FrameLayout
+                android:id="@+id/btn_aqsz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true"
+                android:paddingBottom="17dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_safety"
+                    android:drawablePadding="9dp"
+                    android:text="安全设置"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+
+            <FrameLayout
+                android:id="@+id/btn_dqbbh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true"
+                android:paddingBottom="17dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_versions"
+                    android:drawablePadding="9dp"
+                    android:text="当前版本号"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <TextView
+                    android:id="@+id/text_vertion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:text="V1.00"
+                    android:textColor="@color/colorTextNormalLight"
+                    android:textSize="14sp" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider"
+                android:visibility="gone"/>
+            <FrameLayout
+                android:id="@+id/btn_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:paddingBottom="17dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:visibility="gone"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_about"
+                    android:drawablePadding="9dp"
+                    android:text="帮助与反馈"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+            <FrameLayout
+                android:id="@+id/btn_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:paddingBottom="17dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_about"
+                    android:drawablePadding="9dp"
+                    android:text="关于我们"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+            <FrameLayout
+                android:id="@+id/btn_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:paddingBottom="17dp"
+                android:paddingLeft="22dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_yuyin"
+                    android:drawablePadding="9dp"
+                    android:text="语音到账提醒"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch1"
+                    android:layout_marginTop="-3dp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@android:color/transparent"
+                    android:button="@drawable/btn_backgrounds"
+                    app:sb_checked_color="@color/colorPrimary"
+                    app:sb_show_indicator="true" />
+
+            </FrameLayout>
+            <View style="@style/Divider" />
+
+            <TextView
+                android:id="@+id/btn_safe_quit"
+                style="@style/button_commit"
+                android:background="@drawable/shape_rect_gray_ded9d9"
+                android:textColor="@color/front_s7"
+                android:text="退出当前账号" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

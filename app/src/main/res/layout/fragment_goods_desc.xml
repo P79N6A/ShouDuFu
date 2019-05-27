@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp_45">
+
+        <com.youth.banner.Banner
+            android:id="@+id/vp_pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:image_scale_type="fit_xy"
+            app:indicator_drawable_selected="@drawable/banner_check"
+            app:indicator_drawable_unselected="@drawable/banner_nocheck"
+            app:indicator_height="10px"
+            app:indicator_margin="10px"
+            app:indicator_width="10px"
+            app:is_auto_play="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <requestFocus />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_fgoodsdesc_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/tv_fgoodsdesc_collect"
+                android:maxLines="2"
+                android:textColor="@color/text_color_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_fgoodsdesc_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableTop="@mipmap/icon_goods_uncollect"
+                android:text="收藏"
+                android:textSize="@dimen/dp_13" />
+
+        </RelativeLayout>
+
+        <View
+            style="@style/Divider"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_fgoodsdesc_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/tv_fgoodsdesc_sales"
+                android:textColor="@color/text_color_red"
+                android:textSize="17sp" />
+
+            <TextView
+                android:id="@+id/tv_fgoodsdesc_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="月销13件"
+                android:textSize="@dimen/dp_14" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_fgoodsdesc_tongbei"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="赠送通贝0"
+            android:background="@color/main_white"
+            android:layout_marginTop="@dimen/dp_1"
+            android:gravity="right"
+            android:textColor="@color/text_color_red"
+            android:textSize="@dimen/dp_13"
+            android:padding="@dimen/dp_10"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/main_white"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_10">
+
+            <TextView
+                android:id="@+id/tv_fgoodsdesc_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/img_fgoodsdesc_more"
+                android:textColor="@color/text_color_black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/img_fgoodsdesc_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="9dp"
+                android:src="@mipmap/icon_more_black" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_goods_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/main_white"
+            android:padding="@dimen/dp_10"
+            android:text="重量435465"
+            android:textColor="@color/text_color_black"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_isReturn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/main_white"
+            android:drawableLeft="@mipmap/icon_warning"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center_vertical"
+            android:padding="@dimen/dp_10"
+            android:text="支持七天无理由退换货"
+            android:textColor="@color/text_color_red"
+            android:textSize="@dimen/dp_12" />
+
+    </LinearLayout>
+</ScrollView>

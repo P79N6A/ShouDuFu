@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/img_shangquan_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toRightOf="@+id/img_shangquan_image">
+
+        <TextView
+            android:id="@+id/tv_shangquan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color_black"
+            android:lines="1"
+            android:textSize="@dimen/dp_18"/>
+        <com.selfshoppingmall.android.view.MyRatingBar
+            android:id="@+id/rb_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:starCount="5"
+            app:starEmpty="@mipmap/unstar"
+            app:starFill="@mipmap/star"
+            app:starHalf="@mipmap/unstar"
+            app:starImageSize="14dp"
+            app:starStep="1.5"
+            app:stepSize="Half"/>
+        <TextView
+            android:id="@+id/tv_shangquan_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="立水桥"/>
+        <TextView
+            android:id="@+id/tv_shangquan_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11人消费"
+            android:textSize="@dimen/dp_10"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21334m"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

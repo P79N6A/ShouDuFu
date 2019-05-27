@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.futuretongfu.ui.activity.HomeImageBannerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_common_title_bar"/>
+
+        <ImageView
+            android:id="@+id/banner_main_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:src="@mipmap/image_home_fragment_banner1"
+            />
+
+        <ImageView
+            android:id="@+id/banner_main_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/home_bg_inside"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.futuretongfu.ui.component.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_swipe_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    app:ios="false"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <RelativeLayout
+        android:id="@+id/view_click"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/imgv_pic"
+            android:layout_width="73dp"
+            android:layout_height="73dp"
+            android:src="@drawable/fynn_prompt_dialog_btn_center_pressed"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/text_name"
+            android:text="name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imgv_pic"
+            android:textSize="@dimen/content_text_size"
+            android:textColor="@color/colorDefaultBlack"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:id="@+id/text_time"
+            android:text="收藏时间：xxxx-xx-xx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_name"
+            android:layout_toRightOf="@id/imgv_pic"
+            android:textSize="13sp"
+            android:textColor="@color/colorTextNormalLight"
+            />
+
+        <View style="@style/Divider"
+            android:layout_below="@id/imgv_pic"></View>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_delete"
+        android:layout_width="61dp"
+        android:layout_height="match_parent"
+        android:background="#FF332C"
+        android:text="删除"
+        android:gravity="center"
+        android:textSize="@dimen/content_text_size"
+        android:textColor="@color/colorWhite"
+        android:clickable="true"/>
+
+</com.futuretongfu.ui.component.SwipeMenuLayout>

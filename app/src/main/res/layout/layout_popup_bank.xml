@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_height="185dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/bank_pop_title_setting"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/imgv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@mipmap/icon_close_2"/>
+        </RelativeLayout>
+
+        <View style="@style/Divider_horizontal_ccc"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_secrecy"
+                android:layout_width="wrap_content"
+                android:layout_height="62dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bank_pop_selector"
+                android:gravity="center"
+                android:textColor="@drawable/selector_bank_pop_textcolor_selector"
+                android:text="设置安全卡"
+                android:textSize="15sp"
+                android:clickable="true"
+                />
+
+            <TextView
+                android:id="@+id/text_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="62dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bank_pop_selector"
+                android:gravity="center"
+                android:textColor="@drawable/selector_bank_pop_textcolor_selector"
+                android:text="解绑"
+                android:textSize="15sp"
+                android:clickable="true"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

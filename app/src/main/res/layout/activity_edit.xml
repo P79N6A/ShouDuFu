@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.user.EditActivity"
+    android:background="@color/colorBg">
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/arrow_back" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/title_text_size"
+            android:textColor="@color/colorWhite"
+            android:maxEms="8"
+            android:singleLine="true" />
+
+        <TextView
+            android:text="保存"
+            android:id="@+id/text_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:textSize="@dimen/subtitle_text_size"
+            android:textColor="@color/colorWhite"
+            />
+
+    </FrameLayout>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/edit_name"
+        android:hint="4到14个字符，不区分大小写"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/index_text_size"
+        android:paddingBottom="@dimen/index_text_size"
+        android:background="@color/colorWhite"
+        android:textColorHint="@color/colorLightGray"
+        android:textSize="@dimen/content_text_size"
+        android:textColor="@color/colorMiddleGray"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/linear_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/view_man"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <TextView
+                android:text="男"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/index_text_size"
+                android:paddingBottom="@dimen/index_text_size"
+                android:textSize="@dimen/content_text_size"
+                android:textColor="@color/colorMiddleGray" />
+
+            <ImageView
+                android:id="@+id/imgv_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/ic_gender_gouhao"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+        <View style="@style/Divider"></View>
+
+        <RelativeLayout
+            android:id="@+id/view_woman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <TextView
+                android:text="女"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/index_text_size"
+                android:paddingBottom="@dimen/index_text_size"
+                android:textSize="@dimen/content_text_size"
+                android:textColor="@color/colorMiddleGray" />
+
+            <ImageView
+                android:id="@+id/imgv_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/ic_gender_gouhao"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+        <View style="@style/Divider"></View>
+
+        <RelativeLayout
+            android:id="@+id/view_secrecy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true">
+
+            <TextView
+                android:text="保密"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/index_text_size"
+                android:paddingBottom="@dimen/index_text_size"
+                android:textSize="@dimen/content_text_size"
+                android:textColor="@color/colorMiddleGray" />
+
+            <ImageView
+                android:id="@+id/imgv_secrecy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@mipmap/ic_gender_gouhao"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+        <View style="@style/Divider"></View>
+
+    </LinearLayout>
+
+</LinearLayout>

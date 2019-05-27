@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorBg">
+
+        <TextView
+            android:id="@+id/text_time"
+            android:text="2017年5月"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/content_text_size"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+
+        <ImageView
+            android:id="@+id/imgv_time"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical|right"
+            android:padding="10dp"
+            android:src="@mipmap/icon_rili"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"/>
+
+    </FrameLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagers_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.futuretongfu.view.CustomExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="#ebebeb"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none"
+        android:footerDividersEnabled="false"
+        android:groupIndicator="@null" />
+</FrameLayout>

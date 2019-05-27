@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBg">
+
+    <include layout="@layout/common_title_bar_change"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:text="通宝余额（元)"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="13sp"
+                android:textColor="@color/colorWhite"/>
+
+            <ImageView
+                android:id="@+id/imgv_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_visible"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_amount"
+            android:text="0.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/layout_1"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="26dp"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/btn_roll_into"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorWhite"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tv_shangquan_tixian"
+            android:text="转入"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/content_text_size"
+            android:textColor="@color/colorDefaultBlack"
+            android:drawableLeft="@mipmap/icon_into"
+            android:drawablePadding="11dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_expansion_2"/>
+
+    </FrameLayout>
+
+    <View style="@style/Divider" />
+
+    <FrameLayout
+        android:id="@+id/btn_roll_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:clickable="true">
+
+        <TextView
+            android:text="转出"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/content_text_size"
+            android:textColor="@color/colorDefaultBlack"
+            android:drawableLeft="@mipmap/icon_roll_out"
+            android:drawablePadding="11dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/icon_expansion_2"/>
+
+    </FrameLayout>
+
+    <View style="@style/Divider" />
+
+
+</LinearLayout>

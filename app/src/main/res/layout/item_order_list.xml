@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_layout_click_white_gray"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/imgv_photo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@mipmap/icon_business_3"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/imgv_photo">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:text="小明同学"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textSize="13sp"
+            android:textColor="@color/colorMiddleGray"/>
+
+        <TextView
+            android:id="@+id/text_time"
+            android:text="2017-04-10 10:13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="@color/colorTextNormalLight"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_momey"
+        android:text="￥1,300.00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_margin_user"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/content_text_size"
+        android:textColor="#FF5500"/>
+
+    <Button
+        android:text="确认退款"
+        android:id="@+id/btn_confirm_order_back"
+        android:layout_width="56dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/text_momey"
+        android:textSize="11sp"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/selector_btn_corner_hollow_blue_1dp"
+        style="?android:attr/borderlessButtonStyle"
+        />
+
+    <View style="@style/Divider"
+        android:layout_below="@id/imgv_photo">
+    </View>
+
+</RelativeLayout>

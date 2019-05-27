@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxEms="8"
+            android:singleLine="true"
+            android:text="个人中心"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/text_set"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="设置"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/title_text_size" />
+
+    </FrameLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swp_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/layout_my_user_info"
+                    layout="@layout/layout_my_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/unlogin_user"
+                    layout="@layout/layout_my_user_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/layout_my_user"
+                    layout="@layout/layout_my_function_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorBg"></View>
+
+
+                <FrameLayout
+                    android:id="@+id/btn_payment_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/text_zfye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:text=""
+                        android:textColor="@color/front_s8"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_balance_paid"
+                        android:drawablePadding="10dp"
+                        android:text="余额"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+
+                <View style="@style/Divider" />
+
+                <FrameLayout
+                    android:id="@+id/btn_F_sort_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_integral"
+                        android:drawablePadding="10dp"
+                        android:text="@string/jifen_f"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_jltyj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:text=""
+                        android:textColor="@color/front_s8"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <View style="@style/Divider" />
+
+                <FrameLayout
+                    android:id="@+id/btn_my_business_circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_business_2"
+                        android:drawablePadding="10dp"
+                        android:text="商圈"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/text_sq"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:text=""
+                        android:textColor="@color/front_s8"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorBg"></View>
+
+                <FrameLayout
+                    android:id="@+id/btn_my_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_recommend"
+                        android:drawablePadding="10dp"
+                        android:text="我的推荐"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:textColor="#FC5924"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <View style="@style/Divider" />
+
+                <FrameLayout
+                    android:id="@+id/btn_upgrade_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_member"
+                        android:drawablePadding="10dp"
+                        android:text="会员升级"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:text="立即升级"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/view_line_upgrade_member"
+                    style="@style/Divider" />
+
+                <FrameLayout
+                    android:id="@+id/btn_joint_agency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_member"
+                        android:drawablePadding="10dp"
+                        android:text="联合代理"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2" />
+
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/view_line_joint_agency"
+                    style="@style/Divider" />
+
+                <FrameLayout
+                    android:id="@+id/btn_upgrade_bussness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/text_upgrad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_member"
+                        android:drawablePadding="10dp"
+                        android:text="升级商家"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:text="立即升级"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/view_line_upgrade_bussness"
+                    style="@style/Divider" />
+
+                <FrameLayout
+                    android:id="@+id/btn_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_market_indent"
+                        android:drawablePadding="10dp"
+                        android:text="销售订单"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:text=""
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <View
+                    android:id="@+id/view_line_order"
+                    style="@style/Divider"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/bank_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@mipmap/icon_bank_card"
+                        android:drawablePadding="10dp"
+                        android:text="银行卡"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:drawablePadding="10dp"
+                        android:drawableRight="@mipmap/icon_expansion_2"
+                        android:text=""
+                        android:textColor="@color/front_s8"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <View style="@style/Divider" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/colorBg"></View>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

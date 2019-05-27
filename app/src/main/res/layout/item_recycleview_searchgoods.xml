@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/iv_goods_cover_pic"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitXY" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_goods_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:ellipsize="end"
+            android:lines="2"
+            android:layout_weight="1"
+            android:textColor="@color/text_color_black" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5">
+            <TextView
+                android:id="@+id/tv_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11.00"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/text_color_red" />
+            <TextView
+                android:id="@+id/tv_goods_tongbai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_goods_price"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textSize="@dimen/dp_11"
+                android:textColor="@color/text_color_white"
+                android:background="@drawable/shape_rect_good_red" />
+            <TextView
+                android:id="@+id/tv_goods_salenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/dp_12"
+                android:textColor="@color/text_color_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

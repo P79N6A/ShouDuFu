@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/provinces_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/provinces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="省份"
+                android:textColor="@drawable/selector_store_upgrade_dialog_selector"
+                android:textSize="@dimen/sp_14"/>
+
+            <View
+                android:id="@+id/line_provinces"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@+id/provinces"
+                android:layout_alignRight="@+id/provinces"
+                android:layout_below="@+id/provinces"
+                android:background="@color/cr_2"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/city_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/provinces_layout">
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="城市"
+                android:textColor="@drawable/selector_store_upgrade_dialog_selector"
+                android:textSize="@dimen/sp_14"/>
+
+            <View
+                android:id="@+id/line_city"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@+id/city"
+                android:layout_alignRight="@+id/city"
+                android:layout_below="@+id/city"
+                android:visibility="gone"
+                android:background="@color/cr_2"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/area_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/city_layout">
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="地区"
+                android:textColor="@drawable/selector_store_upgrade_dialog_selector"
+                android:textSize="@dimen/sp_14"/>
+
+            <View
+                android:id="@+id/line_area"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignLeft="@+id/area"
+                android:layout_alignRight="@+id/area"
+                android:layout_below="@+id/area"
+                android:visibility="gone"
+                android:background="@color/cr_2"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="确定"/>
+
+    </RelativeLayout>
+
+    <View style="@style/Divider"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/provinces_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/citys_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/area_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>

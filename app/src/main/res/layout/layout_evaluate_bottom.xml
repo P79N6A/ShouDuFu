@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/main_white"
+        android:padding="@dimen/dp_10">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/icon_apply1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:text="店铺评分"
+            android:textColor="@color/text_color_gray"
+            android:textSize="@dimen/dp_13"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="物流速度"
+            android:textColor="@color/text_color_gray"
+            android:textSize="13sp" />
+
+        <com.futuretongfu.view.MyRatingBar
+            android:id="@+id/rb_goodsevaluate_wuliu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            app:starCount="5"
+            app:starEmpty="@mipmap/unstar"
+            app:starFill="@mipmap/star"
+            app:starHalf="@mipmap/unstar"
+            app:starImageSize="14dp"
+            app:starStep="5"
+            app:stepSize="Half"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务态度"
+            android:textColor="@color/text_color_gray"
+            android:textSize="13sp" />
+
+        <com.futuretongfu.view.MyRatingBar
+            android:id="@+id/rb_goodsevaluate_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_10"
+            app:starCount="5"
+            app:starEmpty="@mipmap/unstar"
+            app:starFill="@mipmap/star"
+            app:starHalf="@mipmap/unstar"
+            app:starImageSize="14dp"
+            app:starStep="5"
+            app:stepSize="Half"/>
+    </LinearLayout>
+</LinearLayout>

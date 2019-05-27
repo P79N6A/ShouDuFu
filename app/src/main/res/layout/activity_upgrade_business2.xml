@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.UpgradeBusiness2Activity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/store_linkly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:hint="商家链接（如有）"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:id="@+id/store_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:hint="经营类型"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:visibility="gone"
+                >
+            </android.support.v7.widget.RecyclerView>
+
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/store_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="@dimen/text_margin_user"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:background="@null"
+                android:gravity="top"
+                android:hint="请输入商家简介"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxLines="6"
+                android:textColor="@color/colorMiddleGray"
+                android:textColorHint="@color/colorLightGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片管理"
+                android:textColor="@color/colorMiddleGray"
+                android:textSize="@dimen/content_text_size"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="114dp"
+                android:layout_marginTop="@dimen/text_margin_user"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_hollow_gray">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/icon_addition_2"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_pic_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        />
+
+                    <ImageView
+                        android:id="@+id/close_pic_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/icon_close_3"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_hollow_gray">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/icon_addition_2"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_pic_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        />
+
+                    <ImageView
+                        android:id="@+id/close_pic_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/icon_close_3"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_hollow_gray">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/icon_addition_2"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_pic_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        />
+
+                    <ImageView
+                        android:id="@+id/close_pic_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/icon_close_3"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <com.futuretongfu.ui.component.checkBox.SmoothCheckBox
+                    android:id="@+id/checkbox_agreement"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    app:color_checked="#FF5500"
+                    app:color_tick="@color/colorWhite"
+                    app:color_unchecked="@color/colorWhite"
+                    app:color_unchecked_stroke="@color/colorTextNormalLight"
+                    app:stroke_width="1dp">
+                </com.futuretongfu.ui.component.checkBox.SmoothCheckBox>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="我已阅读并同意"
+                    android:textColor="@color/colorTextNormalLight"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:id="@+id/btn_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:text="《首都富商家协议》"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_btn_corner_blue"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

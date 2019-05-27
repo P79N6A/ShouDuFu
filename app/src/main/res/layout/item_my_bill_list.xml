@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_layout_click_white_gray"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgv_photo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/icon_business_3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/imgv_photo"
+        android:layout_toLeftOf="@+id/right_layout"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginBottom="12dp"
+            android:text="小明同学"
+            android:textColor="@color/colorMiddleGray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-04-10 10:13"
+            android:textColor="@color/colorTextNormalLight"
+            android:textSize="11sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/text_margin_user"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/addView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FF5500"
+            android:visibility="gone"
+            android:layout_marginRight="2dp"
+            android:textSize="@dimen/content_text_size" />
+
+        <ImageView
+            android:id="@+id/imgv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:visibility="gone"
+            android:src="@mipmap/icon_tongbei" />
+
+        <TextView
+            android:id="@+id/text_monery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥1,300.00"
+            android:textColor="@color/wored"
+            android:textSize="@dimen/content_text_size" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/Divider"
+        android:layout_below="@id/imgv_photo"></View>
+
+</RelativeLayout>

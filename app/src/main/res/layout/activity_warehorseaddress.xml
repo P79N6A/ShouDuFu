@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_gray">
+    <RelativeLayout
+        android:id="@+id/my_address_nodata_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/my_bank_nodata_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_empty_page" />
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_bank_nodata_iv"
+            android:gravity="center"
+            android:text="您还未添加收获地址" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_above="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+
+        <include layout="@layout/layout_common_title_bar" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swp_bank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/dp_10">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/layout_title">
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/view_line"
+        style="@style/Divider"
+        android:layout_above="@id/rl_bottom"/>
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_red">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:drawableLeft="@mipmap/icon_btn_add"
+            android:drawablePadding="10dp"
+            android:text="添加新地址"
+            android:textColor="@color/text_color_white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

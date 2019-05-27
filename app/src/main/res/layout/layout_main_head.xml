@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/rl_yesterday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:background="@drawable/shape_rect_white_corners"
+            android:orientation="horizontal"
+            android:paddingBottom="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="30dp"
+            android:paddingTop="40dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/icon_main_money" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昨日转换（元）"
+                    android:textColor="@color/body_text_1" />
+
+                <TextView
+                    android:id="@+id/tv_yesterday_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="0.00元"
+                    android:textColor="@color/text_color_red" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_yesterday_consume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rect_white_corners"
+                android:drawableLeft="@mipmap/icon_main_xiaofei"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:text="消费增值" />
+
+            <TextView
+                android:id="@+id/tv_yesterday_shop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rect_white_corners"
+                android:drawableLeft="@mipmap/icon_main_shop"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center_vertical"
+                android:text="商城" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <cn.bingoogolapple.bgabanner.BGABanner
+            android:id="@+id/banner_main_default"
+            style="@style/BannerDefaultStyle"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            app:banner_pointDrawable="@drawable/selector_dots_selector"
+            app:banner_transitionEffect="defaultEffect" />
+
+        <LinearLayout
+            android:id="@+id/home_youp_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/home_image_youp_view"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.5"
+                android:scaleType="fitXY"
+                android:src="@mipmap/image_home_youp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/home_image_taob_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/image_home_taob" />
+
+                <ImageView
+                    android:id="@+id/home_image_jingd_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/image_home_jingd" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/image_home_banner"
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/home_banner"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/image_home_banner1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon_home_banner1"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/image_home_banner2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/wlsq_banner3"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

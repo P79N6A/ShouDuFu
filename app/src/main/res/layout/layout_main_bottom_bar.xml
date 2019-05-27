@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <RadioGroup
+        android:id="@+id/main_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <RadioButton
+            android:id="@+id/radiobutton1"
+            style="@style/Bottom_RadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_bottom_bar_shouye"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/radiobutton2"
+            style="@style/Bottom_RadioButton"
+            android:drawableTop="@drawable/selector_bottom_bar_wlsq"
+            android:text="商圈" />
+
+        <RadioButton
+            android:id="@+id/radiobutton3"
+            style="@style/Bottom_RadioButton"
+            android:drawableTop="@drawable/selector_bottom_bar_payment"
+            android:text="支付" />
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <RadioButton
+                android:id="@+id/radiobutton4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background="@null"
+                android:button="@null"
+                android:paddingBottom="@dimen/dp_2"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/tab_color_selector"
+                android:textSize="@dimen/main_bom_bar_text_size"
+                android:paddingRight="@dimen/dp_3"
+                android:drawableTop="@drawable/selector_bottom_bar_shopping"
+                android:text="购物车" />
+            <TextView
+                android:id="@+id/remark_num"
+                style="@style/textview_red_home_notice"
+                android:layout_alignRight="@+id/radiobutton4"
+                android:layout_alignTop="@+id/radiobutton4" />
+        </RelativeLayout>
+        <RadioButton
+            android:id="@+id/radiobutton5"
+            style="@style/Bottom_RadioButton"
+            android:drawableTop="@drawable/selector_bottom_bar_my"
+            android:text="我的" />
+    </RadioGroup>
+</RelativeLayout>

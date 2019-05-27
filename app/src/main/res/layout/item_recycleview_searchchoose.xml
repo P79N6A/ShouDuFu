@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/cb_search_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rect_gray_topsearch"
+        android:button="@null"
+        android:drawableLeft="@drawable/selector_checkbox_choose"
+        android:paddingLeft="@dimen/dp_5"
+        android:maxLength="4"
+        android:minWidth="80dp"
+        android:text="是否自营"
+        android:textColor="@drawable/radiobutton_overage_text" />
+
+</LinearLayout>

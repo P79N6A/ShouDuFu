@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:orientation="vertical"
+    android:id="@+id/register1lin"
+    >
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@drawable/shape_rect_biankuang_red"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_help"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_10"
+                    android:src="@mipmap/icon_regist_help" />
+                <RadioGroup
+                    android:id="@+id/radio_group_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/top_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/cb4"
+                            style="@style/checkbox_jibie"
+                            android:checked="true"
+                            android:text="创投合伙人(10000)" />
+                        <RadioButton
+                            android:id="@+id/cb3"
+                            style="@style/checkbox_jibie"
+                            android:text="创客合伙人(1000)" />
+                        <RadioButton
+                            android:id="@+id/cb1"
+                            style="@style/checkbox_jibie"
+                            android:text="免费注册"
+                            android:textSize="@dimen/dp_10" />
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/bottom_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RadioButton
+                            android:id="@+id/cb5"
+                            style="@style/checkbox_jibie"
+                            android:text="创业合伙人（3000）" />
+                        <RadioButton
+                            android:id="@+id/cb2"
+                            style="@style/checkbox_jibie"
+                            android:text="拓客合伙人(100)" />
+                    </RadioGroup>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_account"
+                    style="@style/edittext_textinput"
+                    android:digits="0123456789abcdefghigjklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@."
+                    android:hint="登录账号"
+                    android:maxLength="32"
+                    android:visibility="gone" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:visibility="gone" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_phone"
+                    style="@style/edittext_textinput"
+                    android:hint="@string/user_account2"
+                    android:inputType="number"
+                    android:maxLength="11" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.futuretongfu.ui.component.PicVerifyCodeView
+                        android:id="@+id/view_pic_verify_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_15" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/text_yzm"
+                        style="@style/edittext_textinput"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/view_pic_verify_code"
+                        android:hint="@string/user_yzm"
+                        android:inputType="text" />
+
+
+                </RelativeLayout>
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text_dxyzm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/get_yzm"
+                        android:textColor="@color/text_color_red" />
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edit_dxyzm"
+                        style="@style/edittext_textinput"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/text_dxyzm"
+                        android:hint="@string/user_dx_yzm"
+                        android:inputType="number" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View style="@style/Divider" />
+
+            <View
+                style="@style/Divider"
+                android:layout_marginTop="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_password"
+                    style="@style/edittext_textinput"
+                    android:hint="@string/user_password2"
+                    android:inputType="textPassword"
+                    android:maxLength="12" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_password_confirm"
+                    style="@style/edittext_textinput"
+                    android:hint="@string/user_password2"
+                    android:inputType="textPassword"
+                    android:maxLength="12" />
+
+                <View
+                    style="@style/Divider"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/text_tjm"
+                    style="@style/edittext_textinput"
+                    android:digits="qwertyuioplkjhgfdsazxcvbnm0123456789AQWSXZEDCVFRTGBNHYUJMKIOLP"
+                    android:hint="推荐码（选填）" />
+
+                <View style="@style/Divider" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <com.futuretongfu.ui.component.checkBox.SmoothCheckBox
+                    android:id="@+id/checkbox_agreement"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    app:color_checked="#FF5500"
+                    app:color_tick="@color/colorWhite"
+                    app:color_unchecked="@color/colorWhite"
+                    app:color_unchecked_stroke="@color/colorTextNormalLight"
+                    app:stroke_width="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="我已阅读并同意"
+                    android:textColor="@color/colorTextNormalLight"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/btn_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:text="《首都富用户协议》"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_marginTop="-10dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_btn_corner_blue"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:textSize="17sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

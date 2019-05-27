@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/unlogin_imgv_photo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/image_head_unlogin"/>
+
+    <LinearLayout
+        android:id="@+id/unlogin_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignTop="@+id/unlogin_imgv_photo"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/unlogin_imgv_photo"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="未登录"
+            android:textColor="@color/color_333333"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6dp"
+            android:text="（点击登录）"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/un_imgv_expansion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_expansion_2"/>
+
+    <ImageView
+        android:id="@+id/unlogon_imgv_my_qr_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/un_imgv_expansion"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="10dp"
+        android:src="@mipmap/icon_scan_code"/>
+</RelativeLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.JointAcencyActivity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_white"
+        android:padding="@dimen/dp_20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rect_gray"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="县级代理人"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_14"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_2"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_3"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_15"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_5"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_6"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_rect_gray"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="市级代理人"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_14"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_2"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_3"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_16"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_5"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_6"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/shape_rect_gray"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="省级代理人"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_14"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_2"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_3"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_17"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_5"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:text="@string/user_type_tip_6"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/dp_13" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

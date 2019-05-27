@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/choose_bank"
+                android:textColor="@color/colorDefaultBlack"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/image_layout_show_bankcard_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="5dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@mipmap/icon_close_2" />
+
+        </FrameLayout>
+
+        <View style="@style/Divider" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_layout_show_bankcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+
+        <View style="@style/Divider" />
+
+        <TextView
+            android:id="@+id/tv_show_bankcard_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

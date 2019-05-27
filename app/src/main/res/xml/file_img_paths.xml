@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-path path="yang/" name="files_path" />
+    <root-path
+        name="root_path"
+        path="." />
+</paths>

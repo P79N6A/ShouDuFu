@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_title_bar" />
+
+    <include
+        android:id="@+id/ll_layout_nodata"
+        layout="@layout/layout_no_data"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_phone_linkman_search"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_margin="9dp"
+        android:background="@drawable/fynn_prompt_dialog_bg_normal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:src="@mipmap/icon_search" />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edt_phone_linkman_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_edt_search"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/colorDefaultBlack"
+            android:textColorHint="@color/cr_4"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_phone_linkman"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+</LinearLayout>

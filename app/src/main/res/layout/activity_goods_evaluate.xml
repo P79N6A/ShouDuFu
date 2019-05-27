@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_evaluate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_white"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_title_bar" />
+
+    <ListView
+        android:id="@+id/recycler_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/layout_evaluate_bottom" />
+
+</LinearLayout>

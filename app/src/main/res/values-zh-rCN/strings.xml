@@ -1,0 +1,130 @@
+<resources>
+    <string name="app_name">首都富</string>
+    <string name="app_name_majia">首都富马甲</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="test">#0000ff</color>
+    <!-- 通用 -->
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="next">下一步</string>
+    <string name="try_again">再试一次</string>
+    <string name="forget_password">找回密码</string>
+    <!-- 错误提示 -->
+    <string name="err_permission_read_photo">读取图片权限被禁止</string>
+    <string name="err_permission_camera">相机权限被禁止</string>
+
+    <!-- toast 提示 -->
+    <string name="toast_dx_yzm_send">验证码已经发送</string>
+    <string name="toast_password_err_form">密码只能输入6-12位字母、数字，且至少是其中的两种组合</string>
+    <string name="toast_phone_refuse_permission">电话权限被禁止</string>
+
+    <!-- ProgressDialog 提示 -->
+    <string name="dlg_progress_login">正在登录...</string>
+    <string name="dlg_progress_register">正在注册...</string>
+    <string name="dlg_confirm_tui_huo">确认退货?</string>
+
+    <string name="shouye">首页</string>
+    <string name="weilaishuanquan">未来商圈</string>
+    <string name="tongxinlu">通讯录</string>
+    <string name="my">我的</string>
+
+    <string name="get_data_error">数据获取失败</string>
+    <string name="get_userinfo_error">获取用户信息失败</string>
+    <string name="no_have_scan">您拒绝了「扫一扫」所需要的相关权限!</string>
+    <string name="no_have_location">您拒绝了「定位」所需要的相关权限!</string>
+    <string name="no_have_phone_linkman">您拒绝了「手机通讯录」所需要的相关权限!</string>
+
+    <!-- 银行卡 -->
+    <string name="title_bank">我的银行卡</string>
+    <string name="choose_bank">选择银行卡</string>
+    <string name="get_yzm">获取验证码</string>
+    <string name="bank_pop_title_setting">设置</string>
+    <string name="bank_pop_title_input_password">输入支付密码</string>
+    <string name="text_delete">删除</string>
+    <string name="bank_card_safety">安全卡</string>
+    <string name="new_friend_title">新的朋友</string>
+    <string name="user_forget_password_pay">忘记支付密码</string>
+    <string name="hint_forget_phone">请输入手机号</string>
+    <string name="hint_forget_card">请输入卡号</string>
+    <string name="hint_choise_card">请选择一张银行卡</string>
+    <string name="bank_card_number_hint">****&#160;&#160;&#160;****&#160;&#160;&#160;****&#160;&#160;&#160;</string>
+
+
+    <string name="hint_edt_search">对方账户/手机号</string>
+
+    <!--QrCode-->
+
+    <!-- 用户中心 -->
+    <string name="user_phone">手机号</string>
+    <string name="user_password">密码</string>
+    <string name="user_password2">登录密码</string>
+    <string name="user_password3">账号密码</string>
+    <string name="user_password_new">新密码</string>
+    <string name="user_password_comfit">确认密码</string>
+    <string name="user_password_edit">修改密码</string>
+    <string name="user_password_un_same">密码不一致</string>
+    <string name="user_forget_password">忘记密码？</string>
+    <string name="user_forget_password2">忘记密码</string>
+    <string name="user_reset_password">重置密码</string>
+    <string name="user_yzm">验证码</string>
+    <string name="user_dx_yzm">短信验证码</string>
+    <string name="user_login">登录</string>
+    <string name="user_register">注册</string>
+    <string name="user_register2">用户注册</string>
+    <string name="user_register3">确定注册</string>
+    <string name="user_account">账号</string>
+    <string name="user_account2">手机号</string>
+    <string name="user_tjm">推荐码</string>
+    <string name="input_phone_number_error">手机号码格式不正确！</string>
+    <string name="scene_animation_personal_data_photo">scene_animation_personal_data_photo</string>
+
+    <!-- 积分相关 -->
+    <string name="dlg_confirm_shou_huo">马上获得通贝，将不能退货</string>
+    <string name="dlg_confirm_shou_huo2">是否进行消费增值凭证上传</string>
+    <string name="jifen_yjjl">奖励通贝：</string>
+    <string name="jifen_ewjljf">额外奖励通贝：</string>
+    <string name="jifen_f">通贝</string>
+    <string name="wlsq_mall">商圈账单</string>
+    <string name="jifen_f_detail">通贝管理</string>
+    <string name="jifen_f_cur">当前通贝数</string>
+    <string name="jifen_f_djs">待结算通贝</string>
+
+    <string name="user_type_tk_vip">拓客合伙人</string>
+    <string name="user_type_ck_vip">创客合伙人</string>
+    <string name="user_type_cy_vip">创业合伙人</string>
+    <string name="user_type_ct_vip">创投合伙人</string>
+    <string name="user_type_tip_11">每日赠现，最高万分之三</string>
+    <string name="user_type_tip_12">每日赠现，最高万分之五</string>
+    <string name="user_type_tip_13">每日赠现，最高万分之六</string>
+    <!-- 代理 -->
+    <string name="user_type_tip_14">每日赠现，最高万分之六</string>
+    <string name="user_type_tip_15">享受全市分红的5%</string>
+    <string name="user_type_tip_16">享受全省分红的3%</string>
+    <string name="user_type_tip_17">享受全国分红的1%</string>
+    <string name="user_type_tip_2">推荐用户</string>
+    <string name="user_type_tip_3">申请商户</string>
+    <string name="user_type_tip_4">申请联合代理</string>
+    <string name="user_type_tip_5">商户广告投放</string>
+    <string name="user_type_tip_6">任务模块发布</string>
+
+    <string name="user_back_tip">确认终止操作？将不享受会员权益</string>
+    <string name="user_rearge_tip">确认充值成功？否则将不享受会员权益</string>
+
+    <string name="external_storage_root_img">external_storage_root_img</string>
+
+    <!-- 网络异常提示 -->
+
+    <string name="double_string_2">%.2f</string>
+
+    <string name="nick_name_hint">4到14个字符，不区分大小写</string>
+    <string name="nick_name_length">昵称只能4到14个字符</string>
+
+    <string name="str_lian_xi_ke_fu">联系客服</string>
+    <string name="str_forget_mibao">忘记密保问题</string>
+    <string name="str_forget_pay_pwd">忘记支付密码</string>
+
+    <string name="umeng_socialize_male">男</string>
+    <string name="umeng_socialize_female">女</string>
+
+</resources>

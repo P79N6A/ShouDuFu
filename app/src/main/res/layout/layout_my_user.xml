@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/imgv_photo"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_head_2" />
+
+    <LinearLayout
+        android:id="@+id/ll_my_fragment_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/imgv_photo"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:text="未命名"
+            android:textColor="@color/colorDefaultBlack"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_user_attribute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/shape_user_attribute"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="享客"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/text_unknown_real_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_user_unknown_real_name"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="未实名"
+            android:textColor="@color/colorTextNormalLight"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_my_fragment_top"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/imgv_photo"
+        android:text=""
+        android:textColor="@color/colorTextNormalLight"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/text_recommender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_phone"
+        android:layout_toRightOf="@id/imgv_photo"
+        android:text="推荐人：无"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/imgv_expansion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/icon_expansion_2" />
+
+    <ImageView
+        android:id="@+id/imgv_my_qr_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/imgv_expansion"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:padding="10dp"
+        android:src="@mipmap/icon_scan_code" />
+
+</RelativeLayout>

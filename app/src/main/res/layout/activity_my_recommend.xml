@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBg"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.MyRecommendActivity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                app:contentScrim="@color/colorBg"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:background="@color/colorWhite"
+                    app:layout_collapseMode="parallax"
+                    app:layout_collapseParallaxMultiplier="0.7">
+
+                    <TextView
+                        android:id="@+id/text_my_recommend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="16dp"
+                        android:drawableLeft="@mipmap/icon_award"
+                        android:drawablePadding="10dp"
+                        android:text="推荐奖励"
+                        android:textColor="@color/colorDefaultBlack"
+                        android:textSize="16sp"
+                        />
+
+                    <View
+                        android:id="@+id/view_line_middle"
+                        style="@style/Divider"
+                        android:layout_below="@id/text_my_recommend"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/linear_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/view_line_middle"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/text_rmb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="center"
+                                android:text="¥0.00"
+                                android:textColor="@color/front_s8"
+                                android:textSize="17sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/shape_circle_orange_5dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="累计奖励金额"
+                                android:textColor="@color/colorMiddleGray"
+                                android:textSize="13sp"/>
+
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_center"
+                            android:layout_width="1dp"
+                            android:layout_height="100dp"
+                            android:background="@color/colorDivider">
+                        </View>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/text_points"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:gravity="center"
+                                android:text="0.00"
+                                android:textColor="@color/front_s8"
+                                android:textSize="17sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/shape_circle_orange_5dp"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="通贝"
+                                android:textColor="@color/colorMiddleGray"
+                                android:textSize="13sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_below="@id/linear_show"
+                        android:background="@color/colorBg">
+                    </View>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs_recommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/colorWhite"
+                    app:tabIndicatorColor="@color/colorPrimary"
+                    app:tabSelectedTextColor="@color/colorPrimary"/>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.futuretongfu.ui.component.ScrollViewPager
+                android:id="@+id/pager_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.futuretongfu.ui.component.ScrollViewPager>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

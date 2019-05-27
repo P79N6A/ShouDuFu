@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.futuretongfu.ui.activity.user.SettingSafeActivity">
+
+    <include
+        layout="@layout/layout_common_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:background="@color/colorWhite"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_upgrad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="自动升级"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size"
+                    android:drawableRight="@mipmap/icon_help"
+                    android:drawablePadding="4dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switch_button"
+                    android:layout_width="52dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center_vertical|right"
+                    app:sb_checked_color="@color/colorPrimary"
+                    app:sb_show_indicator="false"/>
+
+            </FrameLayout>
+
+            <View style="@style/Divider"
+                android:visibility="gone"/>
+
+            <FrameLayout
+                android:id="@+id/btn_edit_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="修改登录密码"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+
+            <FrameLayout
+                android:id="@+id/btn_edit_pay_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="修改支付密码"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+
+            <FrameLayout
+                android:id="@+id/btn_edit_mibao_wenti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="修改密保问题"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+
+            <FrameLayout
+                android:id="@+id/btn_edit_shous_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:paddingBottom="18dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/selector_layout_click_white_gray"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="修改手势密码"
+                    android:textColor="@color/colorDefaultBlack"
+                    android:textSize="@dimen/content_text_size" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:src="@mipmap/icon_expansion_2" />
+
+            </FrameLayout>
+
+            <View style="@style/Divider" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBg">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="取消"
+            android:id="@+id/text_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/colorDefaultBlack"
+            android:textSize="15sp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"/>
+
+        <TextView
+            android:text="确定"
+            android:id="@+id/text_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:layout_gravity="center_vertical|right"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"/>
+
+    </FrameLayout>
+
+    <View style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_gravity="center_horizontal">
+
+        <com.bruce.pickerview.LoopView
+            android:id="@+id/loop_view_year"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:canLoop="false"
+            app:centerTextColor="#ff000000"
+            app:drawItemCount="7"
+            app:initPosition="3"
+            app:lineColor="#CCCCCC"
+            app:textSize="25sp"
+            app:topBottomTextColor="#ffafafaf"/>
+
+        <com.bruce.pickerview.LoopView
+            android:id="@+id/loop_view_month"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_weight="1"
+            app:canLoop="false"
+            app:centerTextColor="@color/colorDefaultBlack"
+            app:drawItemCount="7"
+            app:initPosition="3"
+            app:lineColor="#CCCCCC"
+            app:textSize="25sp"
+            app:topBottomTextColor="@color/colorTextNormalLight"/>
+
+    </LinearLayout>
+
+</LinearLayout>
