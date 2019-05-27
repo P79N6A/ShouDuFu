@@ -55,6 +55,8 @@
 
         </LinearLayout>
 
+
+
         <TextView
             android:id="@+id/tv_search_store_cancel"
             android:layout_width="wrap_content"
