@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 
 def versionMajor = 2
 def versionMinor = 2
-def versionPatch = 0
+def versionPatch = 7
 def versionBuild = 0
 
 def releaseTime() {
@@ -24,20 +24,20 @@ android {
         applicationId "com.futuretongfu"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 220
+        versionCode 227
         //versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true    //启用multidex的支持
         manifestPlaceholders = [
-                JPUSH_PKGNAME : applicationId,
+                JPUSH_PKGNAME: applicationId,
                 JPUSH_APPKEY : "407e32d3da45f562244e36c1", //JPush 上注册的包名对应的 Appkey.
-                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
         // 配置.so文件
         ndk {
             // 选择要添加的对应的cpu类型的.so库
-            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'mips','mips64','x86_64'
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'mips', 'mips64', 'x86_64'
         }
     }
     signingConfigs {
@@ -97,7 +97,7 @@ android {
 
         }
         // 第一个马甲包
-        majiabaoOne.initWith(buildTypes.debug) // 以release的配置来初始化马甲包配置
+        majiabaoOne.initWith(buildTypes.release) // 以release的配置来初始化马甲包配置
         majiabaoOne {
             applicationIdSuffix ".majiabaoOne"
             // 修改马甲包的applicationId，马甲包的application将为com.liunian.majiabaotest.majiabaoOne，即在原来的applicationId后加上配置内容
@@ -123,15 +123,15 @@ android {
         Qh360 {}
         XiaoMi {}
         HuaWei {}
-        oppo{}
-        SVMSUNG{}
-        meizu{}
+        oppo {}
+        SVMSUNG {}
+        meizu {}
     }
     //多渠道打包
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [APK_CHANNEL_VALUE: name]
     }
-    lintOptions{
+    lintOptions {
         checkReleaseBuilds false
         abortOnError false
     }

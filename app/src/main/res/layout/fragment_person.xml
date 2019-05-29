@@ -120,6 +120,22 @@
                         android:drawablePadding="@dimen/dp_7"
                         android:text="商圈订单" />
                 </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_fperson_shopping"
+                    style="@style/linearlayout_person">
+
+                    <TextView
+                        android:id="@+id/tv_fperson_shopping"
+                        style="@style/textview_wrap_content"
+                        android:text="55"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:drawableTop="@mipmap/icon_shopping_nor"
+                        style="@style/textview_wrap_content"
+                        android:drawablePadding="@dimen/dp_7"
+                        android:text="购物车" />
+                </LinearLayout>
             </LinearLayout>
 
             <View style="@style/Divider" />

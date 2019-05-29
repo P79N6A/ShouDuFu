@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical"
     android:orientation="horizontal">
     <RadioGroup
+        android:background="@android:color/white"
         android:id="@+id/main_radio_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:paddingTop="5dp">
 
@@ -23,12 +23,9 @@
             style="@style/Bottom_RadioButton"
             android:drawableTop="@drawable/selector_bottom_bar_wlsq"
             android:text="商圈" />
+        <View style="@style/Bottom_TabRadioButton"/>
 
-        <RadioButton
-            android:id="@+id/radiobutton3"
-            style="@style/Bottom_RadioButton"
-            android:drawableTop="@drawable/selector_bottom_bar_payment"
-            android:text="支付" />
+
         <RelativeLayout
             android:layout_width="0dip"
             android:layout_height="wrap_content"
@@ -44,8 +41,9 @@
                 android:textColor="@color/tab_color_selector"
                 android:textSize="@dimen/main_bom_bar_text_size"
                 android:paddingRight="@dimen/dp_3"
-                android:drawableTop="@drawable/selector_bottom_bar_shopping"
-                android:text="购物车" />
+                android:drawableTop="@drawable/selector_bottom_bar_payment"
+                android:text="支付" />
+            <!--selector_bottom_bar_shopping-->
             <TextView
                 android:id="@+id/remark_num"
                 style="@style/textview_red_home_notice"
@@ -58,4 +56,12 @@
             android:drawableTop="@drawable/selector_bottom_bar_my"
             android:text="我的" />
     </RadioGroup>
+
+
+
+    <!--<RadioButton
+            android:id="@+id/radiobutton3"
+            style="@style/Bottom_RadioButton"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="直播" />-->
 </RelativeLayout>

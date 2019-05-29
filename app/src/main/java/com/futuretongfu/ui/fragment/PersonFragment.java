@@ -1,23 +1,17 @@
 package com.futuretongfu.ui.fragment;
 
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 
 import com.appkefu.lib.interfaces.KFAPIs;
 import com.futuretongfu.OkUtils;
@@ -27,13 +21,10 @@ import com.futuretongfu.constants.Constants;
 import com.futuretongfu.constants.RequestCode;
 import com.futuretongfu.iview.ICheckUpgradeView;
 import com.futuretongfu.iview.IMyFragmentView;
-import com.futuretongfu.model.entity.User;
 import com.futuretongfu.model.manager.UserManager;
 import com.futuretongfu.presenter.MyFragmentPresenter;
 import com.futuretongfu.presenter.Presenter;
-import com.futuretongfu.presenter.account.PaymentBalancePresenter;
 import com.futuretongfu.presenter.user.BusinessUpgradePresenter;
-import com.futuretongfu.ui.activity.AddFriendActivity;
 import com.futuretongfu.ui.activity.JointAcencyActivity;
 import com.futuretongfu.ui.activity.MyAttentionActivity;
 import com.futuretongfu.ui.activity.MyCollectionActivity;
@@ -41,13 +32,12 @@ import com.futuretongfu.ui.activity.MyQrCodeActivity;
 import com.futuretongfu.ui.activity.MyRecommendActivity;
 import com.futuretongfu.ui.activity.UpgradeBusiness1Activity;
 import com.futuretongfu.ui.activity.UpgradeBusiness2Activity;
-import com.futuretongfu.ui.activity.UpgradeBusinessUpdateActivity;
 import com.futuretongfu.ui.activity.UpgradeMember2Activity;
 import com.futuretongfu.ui.activity.goods.SaleReturnActivity;
 import com.futuretongfu.ui.activity.order.OrderConsumer2Activity;
 import com.futuretongfu.ui.activity.order.OrderConsumerActivity;
 import com.futuretongfu.ui.activity.order.OrderManagerActivity;
-import com.futuretongfu.ui.activity.user.EditPayPasswordActivity;
+import com.futuretongfu.ui.activity.shopping.ShopActivity;
 import com.futuretongfu.ui.activity.user.LoginActivity;
 import com.futuretongfu.ui.activity.user.PersonalCenterActivity;
 import com.futuretongfu.ui.activity.user.SettingActivity;
@@ -68,7 +58,6 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -128,6 +117,9 @@ public class PersonFragment extends BaseFragment implements IMyFragmentView, ICh
     TextView tv_fperson_kefu;
     @Bind(R.id.tv_fperson_erweima)
     TextView tv_fperson_erweima;
+    //购物车
+    @Bind(R.id.tv_fperson_shopping)
+    TextView tv_fperson_shopping;
 
     private MyFragmentPresenter myFragmentPresenter;
     private BusinessUpgradePresenter businessUpgradePresenter;
@@ -182,7 +174,7 @@ public class PersonFragment extends BaseFragment implements IMyFragmentView, ICh
             R.id.tv_fmytv_unevaluate, R.id.tv_fmy_after_sales, R.id.tv_fperson_tuijian, R.id.tv_fperson_coupon,
             R.id.tv_fperson_membership, R.id.tv_fperson_invitefriend, R.id.tv_fperson_moreorder,
             R.id.ll_fperson_collect, R.id.ll_fperson_concern, R.id.ll_fperson_history, R.id.rl_fperson_details,
-            R.id.img_fperson_ercode, R.id.unlogin_user, R.id.tv_fperson_erweima})
+            R.id.img_fperson_ercode, R.id.unlogin_user, R.id.tv_fperson_erweima,R.id.ll_fperson_shopping})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_fperson_setting:   //设置
@@ -203,6 +195,9 @@ public class PersonFragment extends BaseFragment implements IMyFragmentView, ICh
                 break;
             case R.id.ll_fperson_history:
                 OrderConsumerActivity.startActivity(getContext());
+                break;
+            case R.id.ll_fperson_shopping:
+                if (isLogin()) ShopActivity.startActivity(getContext());
                 break;
             case R.id.tv_fperson_moreorder:  //我的订单
                 if (isLogin())

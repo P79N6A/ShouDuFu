@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -32,8 +33,8 @@ import com.futuretongfu.ui.fragment.BaseFragment;
 import com.futuretongfu.ui.fragment.HomeFragment;
 import com.futuretongfu.ui.fragment.PayFragment;
 import com.futuretongfu.ui.fragment.PersonFragment;
-import com.futuretongfu.ui.fragment.ShoppingFragment;
 import com.futuretongfu.ui.fragment.WlsqFragment;
+import com.futuretongfu.ui.live_video.Live_Fragment;
 import com.futuretongfu.utils.CacheActivityUtil;
 import com.futuretongfu.utils.TimerUtil;
 import com.umeng.socialize.UMShareAPI;
@@ -49,7 +50,7 @@ import butterknife.Bind;
 /**
  * Created by zhanggf on 2018/3/14.
  */
-public class MainActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener, IMainView {
+public class MainActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener, IMainView, View.OnClickListener {
 
     private static final int HOMEPAGE_TAG = 0, SHANGQUAN_TAG = 1, PAY_TAG = 2, SHOP_TAG = 3, PERSON_TAG = 4;
     @Bind(R.id.radiobutton1)
@@ -57,7 +58,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
     @Bind(R.id.radiobutton2)
     RadioButton radiobutton2;
     @Bind(R.id.radiobutton3)
-    RadioButton radiobutton3;
+    ImageView radiobutton3;
     @Bind(R.id.radiobutton4)
     RadioButton radiobutton4;
     @Bind(R.id.radiobutton5)
@@ -96,13 +97,13 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
         fragments.add(shangquanFragment);
 //        fragments.add(new TxlFragment());
 //        fragments.add(new MainFragment());
+        fragments.add(new Live_Fragment());
         fragments.add(new PayFragment());
-        fragments.add(new ShoppingFragment());
 //        fragments.add(new MyFragment());
         fragments.add(new PersonFragment());
         radiobutton1.setOnCheckedChangeListener(this);
         radiobutton2.setOnCheckedChangeListener(this);
-        radiobutton3.setOnCheckedChangeListener(this);
+        radiobutton3.setOnClickListener(this);
         radiobutton4.setOnCheckedChangeListener(this);
         radiobutton5.setOnCheckedChangeListener(this);
         //默认选中首页
@@ -145,7 +146,16 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
         intent.putExtra(Intent_Extra_NeedGuide, isNeedGuide);
         context.startActivity(intent);
     }
-
+    //直播  点击事件
+    @Override
+    public void onClick(View view) {
+        radiobutton1.setChecked(false);
+        radiobutton2.setChecked(false);
+        //radiobutton3.setChecked(false);
+        radiobutton4.setChecked(false);
+        radiobutton5.setChecked(false);
+        changeFragment(PAY_TAG);
+    }
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
         if (b) {
@@ -153,7 +163,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
                 case R.id.radiobutton1:
                     radiobutton1.setChecked(true);
                     radiobutton2.setChecked(false);
-                    radiobutton3.setChecked(false);
+                    //radiobutton3.setChecked(false);
                     radiobutton4.setChecked(false);
                     radiobutton5.setChecked(false);
                     changeFragment(HOMEPAGE_TAG);
@@ -161,23 +171,23 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
                 case R.id.radiobutton2:
                     radiobutton1.setChecked(false);
                     radiobutton2.setChecked(true);
-                    radiobutton3.setChecked(false);
+                    //radiobutton3.setChecked(false);
                     radiobutton4.setChecked(false);
                     radiobutton5.setChecked(false);
                     changeFragment(SHANGQUAN_TAG);
                     break;
-                case R.id.radiobutton3:
+                /*case R.id.radiobutton3:
                     radiobutton1.setChecked(false);
                     radiobutton2.setChecked(false);
-                    radiobutton3.setChecked(true);
+                    //radiobutton3.setChecked(true);
                     radiobutton4.setChecked(false);
                     radiobutton5.setChecked(false);
                     changeFragment(PAY_TAG);
-                    break;
+                    break;*/
                 case R.id.radiobutton4:
                     radiobutton1.setChecked(false);
                     radiobutton2.setChecked(false);
-                    radiobutton3.setChecked(false);
+                    //radiobutton3.setChecked(false);
                     radiobutton4.setChecked(true);
                     radiobutton5.setChecked(false);
                     if (!UserManager.getInstance().isLogin()) {
@@ -190,7 +200,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
                 case R.id.radiobutton5:
                     radiobutton1.setChecked(false);
                     radiobutton2.setChecked(false);
-                    radiobutton3.setChecked(false);
+                    //radiobutton3.setChecked(false);
                     radiobutton4.setChecked(false);
                     radiobutton5.setChecked(true);
                     changeFragment(PERSON_TAG);
@@ -298,6 +308,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
     public void onUpdateUserInfoFaile(boolean showToast, String msg) {
         showToast(msg);
     }
+
 
 
 
