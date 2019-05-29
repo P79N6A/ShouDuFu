@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 
 def versionMajor = 2
 def versionMinor = 2
-def versionPatch = 0
+def versionPatch = 7
 def versionBuild = 0
 
 def releaseTime() {
@@ -73,7 +73,6 @@ android {
         release {
             shrinkResources true   //移除无用的资源文件
             zipAlignEnabled true  //压缩对齐生成的apk包
-
             minifyEnabled true     //   //启用混淆代码的功能
             manifestPlaceholders =
                     [APP_NAME  : "@string/app_name",
@@ -97,7 +96,7 @@ android {
 
         }
         // 第一个马甲包
-        majiabaoOne.initWith(buildTypes.debug) // 以release的配置来初始化马甲包配置
+        majiabaoOne.initWith(buildTypes.release) // 以release的配置来初始化马甲包配置
         majiabaoOne {
             applicationIdSuffix ".majiabaoOne"
             // 修改马甲包的applicationId，马甲包的application将为com.liunian.majiabaotest.majiabaoOne，即在原来的applicationId后加上配置内容
