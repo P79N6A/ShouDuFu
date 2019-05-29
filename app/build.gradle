@@ -24,20 +24,20 @@ android {
         applicationId "com.futuretongfu"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 220
+        versionCode 227
         //versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true    //启用multidex的支持
         manifestPlaceholders = [
-                JPUSH_PKGNAME : applicationId,
+                JPUSH_PKGNAME: applicationId,
                 JPUSH_APPKEY : "407e32d3da45f562244e36c1", //JPush 上注册的包名对应的 Appkey.
-                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
         // 配置.so文件
         ndk {
             // 选择要添加的对应的cpu类型的.so库
-            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'mips','mips64','x86_64'
+            abiFilters 'x86', 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'mips', 'mips64', 'x86_64'
         }
     }
     signingConfigs {
@@ -122,15 +122,15 @@ android {
         Qh360 {}
         XiaoMi {}
         HuaWei {}
-        oppo{}
-        SVMSUNG{}
-        meizu{}
+        oppo {}
+        SVMSUNG {}
+        meizu {}
     }
     //多渠道打包
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [APK_CHANNEL_VALUE: name]
     }
-    lintOptions{
+    lintOptions {
         checkReleaseBuilds false
         abortOnError false
     }

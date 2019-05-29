@@ -1,44 +1,35 @@
 package com.futuretongfu.ui.activity;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DownloadManager;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
-import com.futuretongfu.OkUtils;
+import com.futuretongfu.R;
 import com.futuretongfu.WeiLaiFuApplication;
 import com.futuretongfu.constants.RequestCode;
 import com.futuretongfu.iview.ISplashView;
+import com.futuretongfu.iview.IUserLoginOffline;
 import com.futuretongfu.model.manager.SysDataManager;
 import com.futuretongfu.model.manager.UserManager;
 import com.futuretongfu.presenter.user.SplashPresenter;
 import com.futuretongfu.ui.activity.user.GestureLockLoginActivity;
 import com.futuretongfu.ui.activity.user.LoginActivity;
-import com.futuretongfu.ui.component.dialog.ProgressDialog;
 import com.futuretongfu.ui.component.dialog.PromptDialog;
+import com.futuretongfu.ui.component.dialog.UpdateAppDialog;
 import com.futuretongfu.utils.AppUtil;
 import com.futuretongfu.utils.CacheActivityUtil;
-import com.futuretongfu.utils.HyOkHttpUtils;
-import com.futuretongfu.utils.PermissionUtil;
-import com.futuretongfu.utils.PromptDialogUtils;
-import com.futuretongfu.utils.TimerUtil;
-import com.futuretongfu.R;
-import com.futuretongfu.iview.IUserLoginOffline;
-import com.futuretongfu.ui.component.dialog.UpdateAppDialog;
 import com.futuretongfu.utils.Logger.Logger;
+import com.futuretongfu.utils.PermissionUtil;
+import com.futuretongfu.utils.TimerUtil;
 import com.futuretongfu.utils.To;
 import com.tbruyelle.rxpermissions.RxPermissions;
+
 import cc.cloudist.acplibrary.ACProgressConstant;
 import cc.cloudist.acplibrary.ACProgressFlower;
 
@@ -102,10 +93,10 @@ public class SplashActivity extends Activity implements ISplashView, IUserLoginO
             return;
         }
         //是否符合更新条件
-        /*if (isForce) {
-            //updateAppForce(url);
+        if (isForce) {
+            updateAppForce(url);
             return;
-        }*/
+        }
         //不强制更新
         updateAppFree(url);
     }

@@ -207,6 +207,8 @@ public class ShoppingCartGroupListAdapter extends BaseExpandableListAdapter {
     }
 
 
+
+
     static class GroupsViewHolder {
         @Bind(R.id.cb_item_shopgroup)
         CheckBox cbItemShopgroup;

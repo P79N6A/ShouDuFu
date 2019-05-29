@@ -1,10 +1,9 @@
-package com.futuretongfu.ui.fragment;
+package com.futuretongfu.ui.activity.shopping;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ExpandableListView;
 import android.widget.LinearLayout;
@@ -21,28 +20,18 @@ import com.futuretongfu.model.entity.FuturePayApiResult;
 import com.futuretongfu.model.manager.UserManager;
 import com.futuretongfu.presenter.Presenter;
 import com.futuretongfu.presenter.goods.OnlineShoppingPresenter;
-import com.futuretongfu.ui.activity.goods.FirmOrderActivity;
+import com.futuretongfu.ui.activity.BaseActivity;
 import com.futuretongfu.ui.adapter.ShoppingCartGroupListAdapter;
 import com.futuretongfu.utils.StringUtil;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 
-/**
- * Created by zhanggf on 2018/3/14.
- * 首页--购物车
- */
-
-public class ShoppingFragment extends BaseFragment implements IOnlineShoppingView, GoodsNumChangeInterface, CheckBoxInterface {
-//    @Bind(R.id.swp_list)
-//    public SwipeRefreshLayout swpList;
-
+public class ShopActivity extends BaseActivity implements IOnlineShoppingView, CheckBoxInterface, GoodsNumChangeInterface {
     @Bind(R.id.layout_empty)
     LinearLayout layout_empty;
     @Bind(R.id.tv_fshopping_manage)
@@ -57,23 +46,23 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
     TextView tvFshoppingCommit;
     @Bind(R.id.ll_fshopping_commit)
     LinearLayout llFshoppingCommit;
+
     private ShoppingCartGroupListAdapter groupListAdapter;
-    /**
-     * 为分组元素和孩子元素声明List
-     * 组元素 的JavaBean中含有iD和name
-     * 孩子元素就是商品的具体属性，也包括有没有被选中
-     * 为了将孩子元素与组元素的数据联合起来，这里要设置组元素的id为主键，并使之成为孩子元素的外键
-     */
     List<ShoppingGroupBean> groups = new ArrayList<>();
     Map<String, List<ShoppingGoodsBean>> children = new HashMap<>();
-    private OnlineShoppingPresenter mPresenter;
     String userId = "";
+
     private double goodsAllTongbei;
     private double goodsAllPrice;
     private int goodsAllNum;
     List<ShoppingGoodsBean> goodsList = new ArrayList();
     private List<String> storeIdList = new ArrayList<>();
 
+    private OnlineShoppingPresenter mPresenter;
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_shop;
+    }
 
     @Override
     protected Presenter getPresenter() {
@@ -81,17 +70,16 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
     }
 
     @Override
-    protected int getLayoutId() {
-        return R.layout.fragment_shopping;
-    }
-
-    @Override
-    protected void init(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        mPresenter = new OnlineShoppingPresenter(getActivity(), this);
+    protected void init(Bundle savedInstanceState) {
+        mPresenter = new OnlineShoppingPresenter(this, this);
         userId = UserManager.getInstance().getUserId() + "";
         mPresenter.getOnlineShoppingList(UserManager.getInstance().getUserId() + "");
     }
 
+   public static void startActivity(Context context) {
+       Intent intent = new Intent(context, ShopActivity.class);
+       context.startActivity(intent);
+   }
     /**
      * 模拟数据<br>
      * 遵循适配器的数据列表填充原则，组元素被放在一个List中，对应的组元素下辖的子元素被放在Map中，<br>
@@ -117,14 +105,8 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
             children.put(groups.get(i).getId(), child);
         }
     }
-
-
-
     @Override
     public void onOnlineShoppingListSuccess(List<ShoppingGroupBean> data) {
-//        if (swpList != null) {
-//            swpList.setRefreshing(false);
-//        }
         clearData();
         if (data == null || data.size() <= 0) {
             layout_empty.setVisibility(View.VISIBLE);
@@ -136,7 +118,7 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
             llFshoppingCommit.setVisibility(View.VISIBLE);
             sulFshoppingManageList.setVisibility(View.VISIBLE);
             initData(data);
-            groupListAdapter = new ShoppingCartGroupListAdapter(getActivity(), groups, children);
+            groupListAdapter = new ShoppingCartGroupListAdapter(this, groups, children);
             groupListAdapter.setCheckBoxInterface(this);
             groupListAdapter.setGoodsNumChangeInterface(this);
             sulFshoppingManageList.setAdapter(groupListAdapter);
@@ -157,10 +139,36 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
             storeIdList.clear();
         }
         cbFshoppingAll.setChecked(false);
-        tvFshoppingPayprice.setText("￥" +StringUtil.fmtMicrometer(goodsAllPrice));
+        tvFshoppingPayprice.setText("￥" + StringUtil.fmtMicrometer(goodsAllPrice));
         tvFshoppingCommit.setText("结算(" + goodsAllNum + ")");
     }
 
+    @Override
+    public void onOnlineShoppingListFail(String msg) {
+        showToast(msg);
+    }
+
+    @Override
+    public void onOnlineShoppingUpdateSuccess(int type, int count, int groupPosition, int childPosition, FuturePayApiResult futurePayApiResult) {
+        setCounter();
+        children.get(groups.get(groupPosition).getId()).get(childPosition).setNum(count);
+        showToast("修改成功");
+        if (type == 1) {
+            if (children.get(groups.get(groupPosition)
+                    .getId()).get(childPosition).getIsChoosed()) {
+                groups.get(groupPosition).setGroupPrice(groups.get(groupPosition).getGroupPrice() + children.get(groups.get(groupPosition)
+                        .getId()).get(childPosition).getPrice());
+            }
+        } else {
+            if (children.get(groups.get(groupPosition)
+                    .getId()).get(childPosition).getIsChoosed()) {
+                groups.get(groupPosition).setGroupPrice(groups.get(groupPosition).getGroupPrice() - children.get(groups.get(groupPosition)
+                        .getId()).get(childPosition).getPrice());
+            }
+        }
+        groupListAdapter.notifyDataSetChanged();
+    }
+        //结算
     private void setCounter() {
         goodsAllPrice = 0.0;
         goodsAllTongbei = 0.0;
@@ -168,35 +176,18 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
         if (goodsList != null) {
             goodsList.clear();
         }
-        for (int i = 0; i < groups.size(); i++) {
-            String id = groups.get(i).getId();
-            List<ShoppingGoodsBean> productInfos = children.get(id);
-            for (int j = 0; j < productInfos.size(); j++) {
-                ShoppingGoodsBean productInfo = productInfos.get(j);
-                if (productInfo.getIsChoosed()) {
-                    goodsAllNum += productInfo.getNum();
-                    goodsAllPrice += productInfo.getPrice() * productInfo.getNum();
-                    goodsAllTongbei += productInfo.getSendTongBei() * productInfo.getNum();
-                    if (!goodsList.contains(productInfo)) {
-                        goodsList.add(productInfo);
-                    }
-                }
-            }
+        if (storeIdList != null) {
+            storeIdList.clear();
         }
-        tvFshoppingPayprice.setText("￥" + StringUtil.fmtMicrometer(goodsAllPrice));
+        cbFshoppingAll.setChecked(false);
+        tvFshoppingPayprice.setText("￥" +StringUtil.fmtMicrometer(goodsAllPrice));
         tvFshoppingCommit.setText("结算(" + goodsAllNum + ")");
     }
 
+    @Override
+    public void onOnlineShoppingUpdateFaile(String msg) {
 
-    private boolean isAllChecked() {
-        for (ShoppingGroupBean group : groups) {
-            if (!group.getIsChoosed()) {
-                return false;
-            }
-        }
-        return true;
     }
-
     /**
      * 全选
      */
@@ -213,7 +204,6 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
         if (groupListAdapter != null)
             groupListAdapter.notifyDataSetChanged();
     }
-
 
     private void setCount() {
         /**
@@ -250,43 +240,6 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
         tvFshoppingCommit.setText("结算(" + goodsAllNum + ")");
     }
 
-
-    @Override
-    public void onOnlineShoppingListFail(String msg) {
-//        if (swpList != null) {
-//            swpList.setRefreshing(false);
-//        }
-        showToast(msg);
-    }
-
-
-    @Override
-    public void onOnlineShoppingUpdateSuccess(int type, int count, int groupPosition, int childPosition, FuturePayApiResult futurePayApiResult) {
-        setCounter();
-        children.get(groups.get(groupPosition).getId()).get(childPosition).setNum(count);
-        showToast("修改成功");
-        if (type == 1) {
-            if (children.get(groups.get(groupPosition)
-                    .getId()).get(childPosition).getIsChoosed()) {
-                groups.get(groupPosition).setGroupPrice(groups.get(groupPosition).getGroupPrice() + children.get(groups.get(groupPosition)
-                        .getId()).get(childPosition).getPrice());
-            }
-        } else {
-            if (children.get(groups.get(groupPosition)
-                    .getId()).get(childPosition).getIsChoosed()) {
-                groups.get(groupPosition).setGroupPrice(groups.get(groupPosition).getGroupPrice() - children.get(groups.get(groupPosition)
-                        .getId()).get(childPosition).getPrice());
-            }
-        }
-        groupListAdapter.notifyDataSetChanged();
-    }
-
-    @Override
-    public void onOnlineShoppingUpdateFaile(String msg) {
-        showToast(msg);
-
-    }
-
     @Override
     public void onOnlineShoppingDeleteSuccess(FuturePayApiResult futurePayApiResult) {
         showToast("删除成功");
@@ -294,120 +247,12 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
         //TODO  刷新购物车数量
         Intent intent = new Intent();
         intent.setAction(Constants.REQUEST_CODE_SHOPCARTNUM);
-        getActivity().sendBroadcast(intent);
+        sendBroadcast(intent);
     }
 
     @Override
     public void onOnlineShoppingDeleteFaile(String msg) {
         showToast(msg);
-    }
-
-
-    private double calculateAllPrice() {
-        double price = 0;
-        for (int i = 0; i < groups.size(); i++) {
-            String id = groups.get(i).getId();
-            List<ShoppingGoodsBean> child = children.get(id);
-            for (int j = 0; j < child.size(); j++) {
-                price += child.get(j).getNum() * child.get(j).getPrice();
-            }
-        }
-        return price;
-    }
-
-
-    @OnClick({R.id.cb_fshopping_all, R.id.tv_fshopping_commit,R.id.tv_fshopping_manage})
-    public void onViewClicked(View view) {
-        switch (view.getId()) {
-            case R.id.cb_fshopping_all:
-                //全选
-                setAllCheck();
-                break;
-            case R.id.tv_fshopping_manage:
-//                tvFshoppingCommit.setText("删除(" + goodsAllNum + ")");
-                break;
-            case R.id.tv_fshopping_commit:
-                if (tvFshoppingCommit.getText().toString().contains("删除")) {
-                    tvFshoppingCommit.setBackgroundResource(R.color.all_track_color);
-                    loadDeleteData();
-                } else if (tvFshoppingCommit.getText().toString().contains("结算")) {
-                    //提交购物车
-                    if (goodsAllNum > 0) {
-                        setCounter();
-                        Intent intent = new Intent(getActivity(), FirmOrderActivity.class);
-                        intent.putExtra("totalMoney", goodsAllPrice);
-                        intent.putExtra("hehe","hhh");
-                        intent.putExtra("goodsAllTongbei", goodsAllTongbei);
-                        intent.putExtra("goodsList", (Serializable) goodsList);
-                        if (storeIdList!=null&&storeIdList.size()>0)
-                            intent.putExtra("onlineStoreId", storeIdList.get(0).toString());
-                        startActivity(intent);
-                    } else {
-                        showToast("请先选择");
-                    }
-                }
-                break;
-        }
-    }
-
-    private void loadDeleteData() {
-        //遍历出勾选的数据
-        List<String> deleteIds = new ArrayList<>();
-        for (int i = 0; i < groups.size(); i++) {
-            String id = groups.get(i).getId();
-            List<ShoppingGoodsBean> productInfos = children.get(id);
-            for (int j = 0; j < productInfos.size(); j++) {
-                ShoppingGoodsBean productInfo = productInfos.get(j);
-                if (productInfo.getIsChoosed()) {
-                    deleteIds.add(productInfo.getCarId() + "");
-                }
-            }
-        }
-        StringBuffer sbf = new StringBuffer();
-        if (deleteIds != null) {
-            for (int i = 0; i < deleteIds.size(); i++) {
-                if (i == 0) {
-                    sbf.append(deleteIds.get(i));
-                } else {
-                    sbf.append("," + deleteIds.get(i));
-                }
-            }
-            if (deleteIds.size() == 0) {
-                showToast("请先选择");
-            } else {
-                mPresenter.deleteOnlineShopping(userId,sbf.toString());
-            }
-        }
-    }
-
-    private int count;
-
-    @Override
-    public void addGoodsNumChange(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
-        ShoppingGoodsBean child = (ShoppingGoodsBean) groupListAdapter.getChild(groupPosition, childPosition);
-        count = child.getNum();
-        count++;
-        mPresenter.updateOnlineShopping(1, count, groupPosition, childPosition, userId, child.getCarId(), count);
-        child.setNum(count);
-        ((TextView) showCountView).setText(count + "");
-    }
-
-    @Override
-    public void reduceGoodsNumChange(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
-        ShoppingGoodsBean child = (ShoppingGoodsBean) groupListAdapter.getChild(groupPosition, childPosition);
-        int countReduce = child.getNum();
-        if (countReduce == 1) {
-            return;
-        }
-        countReduce--;
-        child.setNum(countReduce);
-        ((TextView) showCountView).setText(countReduce + "");
-        mPresenter.updateOnlineShopping(2, countReduce, groupPosition, childPosition, userId, child.getCarId(), countReduce);
-    }
-
-    @Override
-    public void deleteGoodsChange(String id) {
-        mPresenter.deleteOnlineShopping(userId, id);
     }
 
     @Override
@@ -434,6 +279,15 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
         }
         groupListAdapter.notifyDataSetChanged();
         setCounter();
+    }
+
+    private boolean isAllChecked() {
+        for (ShoppingGroupBean group : groups) {
+            if (!group.getIsChoosed()) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
@@ -473,14 +327,33 @@ public class ShoppingFragment extends BaseFragment implements IOnlineShoppingVie
         setCounter();
     }
 
+    private int count;
 
     @Override
-    public void onResume() {
-        mPresenter.getOnlineShoppingList(userId);
-        //TODO  刷新购物车数量
-        Intent intent = new Intent();
-        intent.setAction(Constants.REQUEST_CODE_SHOPCARTNUM);
-        getActivity().sendBroadcast(intent);
-        super.onResume();
+    public void addGoodsNumChange(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
+        ShoppingGoodsBean child = (ShoppingGoodsBean) groupListAdapter.getChild(groupPosition, childPosition);
+        count = child.getNum();
+        count++;
+        mPresenter.updateOnlineShopping(1, count, groupPosition, childPosition, userId, child.getCarId(), count);
+        child.setNum(count);
+        ((TextView) showCountView).setText(count + "");
+    }
+
+    @Override
+    public void reduceGoodsNumChange(int groupPosition, int childPosition, View showCountView, boolean isChecked) {
+        ShoppingGoodsBean child = (ShoppingGoodsBean) groupListAdapter.getChild(groupPosition, childPosition);
+        int countReduce = child.getNum();
+        if (countReduce == 1) {
+            return;
+        }
+        countReduce--;
+        child.setNum(countReduce);
+        ((TextView) showCountView).setText(countReduce + "");
+        mPresenter.updateOnlineShopping(2, countReduce, groupPosition, childPosition, userId, child.getCarId(), countReduce);
+    }
+
+    @Override
+    public void deleteGoodsChange(String id) {
+        mPresenter.deleteOnlineShopping(userId, id);
     }
 }

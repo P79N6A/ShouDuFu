@@ -24,5 +24,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/view_line"/>
-
+    <ImageView
+        android:id="@+id/radiobutton3"
+        android:layout_alignParentBottom="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/sign" />
 </RelativeLayout>
