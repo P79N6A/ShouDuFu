@@ -193,6 +193,7 @@ dependencies {
     compile 'com.qianwen:update-app:3.5.2'
 
 
+
 }
 repositories {
     mavenCentral()
