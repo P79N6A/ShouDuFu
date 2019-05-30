@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/live_toolbar"
+    <RelativeLayout
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <android.support.design.widget.TabLayout
             android:id="@+id/tablayout"
-            android:background="@color/black"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="3dp"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabTextColor="@android:color/black"
+            app:tabSelectedTextColor="@android:color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
-    </android.support.v7.widget.Toolbar>
-
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/icon_erwe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
