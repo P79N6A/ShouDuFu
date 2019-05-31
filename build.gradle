@@ -5,13 +5,16 @@ buildscript {
     repositories {
         jcenter()
         google()
+        flatDir {
+            dirs 'src/main/aarLibs'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        //        //        // in the individual module build.gradle files
     }
 }
 
@@ -19,8 +22,12 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://www.jitpack.io" }
-
         google()
+        maven { url 'http://mvnrepo.alibaba-inc.com/mvn/repository'}
+        flatDir {
+            dirs 'src/main/aarLibs'
+            dirs '../alivc-player-lib'
+        }
     }
 }
 

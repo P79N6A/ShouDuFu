@@ -184,16 +184,16 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile files('libs/appkefu_kefu_sdk4.jar')
     compile files('libs/AMap3DMap_6.5.0_AMapSearch_6.5.0_AMapLocation_4.3.0_20181016.jar')
-
-    compile 'cn.jiguang.sdk:jpush:3.1.6'  // 此处以JPush 3.1.6 版本为例。
-    compile 'cn.jiguang.sdk:jcore:1.2.5'  // 此处以JCore 1.2.5 版本为例。
-
+    compile 'cn.jiguang.sdk:jpush:3.1.6'
+    // 此处以JPush 3.1.6 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.2.5'
+    // 此处以JCore 1.2.5 版本为例。
     compile files('libs/Msc.jar')
     compile 'com.github.huburt-Hu:NewbieGuide:v2.4.0'
     compile 'com.qianwen:update-app:3.5.2'
-
-
-
+    compile files('libs/live-beauty-3.4.0.jar')
+    compile files('libs/live-face-3.4.0.jar')
+    compile files('libs/live-pusher-3.4.0.jar')
 }
 repositories {
     mavenCentral()
